@@ -144,7 +144,7 @@
       </nav>
 </header>
 
-<nav id="fp-nav" class="_gnb" style="z-index: 9;">
+<nav id="fp-nav" class="_gnb" style="z-index: 999;">
   <ul>
       <li><a href="#main" data-menuanchor="main"><span></span></a><p class="fp-tooltip left">메인</p></li>
       <li><a href="#prereg" data-menuanchor="prereg"><span></span></a><p class="fp-tooltip left">사전예약</p> </li>
@@ -1215,7 +1215,7 @@ $(document).ready(function(){
         //     '미디어',
         //     '푸터'
         // ],
-        // showActiveTooltip: true,
+        showActiveTooltip: true,
         bigSectionsDestination: top,
         normalScrollElements: ".popup_video_mask, .wrap_pop .scroll_x",
         fixedElements: ".fixed_top, .fixed_sns, div.m_top, .popup_btn, #m_menu, #pop_bg, #pop_wrap",
@@ -1333,50 +1333,6 @@ $(document).ready(function() {
   $(window).on('hashchange', checkHash);
 });
 
-$(document).ready(function() {
-    // 현재 해시를 확인하고 해당 a 태그에 new_color 클래스 추가
-    function updateNavColor() {
-        const hash = window.location.hash || '#main'; // 기본값 설정
-        $('.nav_btn').removeClass('new_color'); // 모든 a 태그에서 new_color 클래스 제거
-
-        // 특정 조건에 따른 클래스 추가
-        if (hash === '#ahcv' || hash === '#invite') {
-            $('#m_desc_cs_1').addClass('new_color'); // m_desc_cs_1에 new_color 추가
-        } else if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
-            $('#m_desc_cs_2').addClass('new_color'); // m_desc_cs_2에 new_color 추가
-        } else if (hash === '#main') {
-            $('a[href="#main"]').addClass('new_color'); // #main에 해당하는 a 태그에 new_color 추가
-        } else if (hash === '#prereg') {
-            $('a[href="#prereg"]').addClass('new_color'); // #prereg에 해당하는 a 태그에 new_color 추가
-        } else if (hash === '#medias') {
-            $('a[href="#medias"]').addClass('new_color'); // #medias에 해당하는 a 태그에 new_color 추가
-        }
-    }
-
-    // 페이지 로드 시 및 해시 변경 시 updateNavColor 함수 호출
-    updateNavColor();
-    $(window).on('hashchange', updateNavColor);
-
-    // a 태그 클릭 시 페이지 이동 및 클래스 추가
-    $('.nav_btn').on('click', function() {
-        const targetHash = $(this).attr('href');
-        
-        // 특정 클릭 이벤트에 따라 new_color 클래스 추가
-        if (this.id === 'm_desc_cs_nav_1' || this.id === 'm_desc_cs_nav_2') {
-            $('#m_desc_cs_1').addClass('new_color');
-            $('#m_desc_cs_2').removeClass('new_color'); // m_desc_cs_2에서 new_color 제거
-        } else if (this.id === 'm_desc_cs_nav_3' || this.id === 'm_desc_cs_nav_4' || this.id === 'm_desc_cs_nav_5') {
-            $('#m_desc_cs_2').addClass('new_color');
-            $('#m_desc_cs_1').removeClass('new_color'); // m_desc_cs_1에서 new_color 제거
-        } else {
-            $('#m_desc_cs_1').removeClass('new_color'); // 기본적으로 m_desc_cs_1에서 new_color 제거
-            $('#m_desc_cs_2').removeClass('new_color'); // 기본적으로 m_desc_cs_2에서 new_color 제거
-        }
-        
-        // 해시를 업데이트하여 페이지 이동
-        window.location.hash = targetHash;
-    });
-});
 
 
 </script>
