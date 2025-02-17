@@ -33,7 +33,7 @@
 html { scroll-behavior: smooth; font-size: 20px;}
 
 /* RESET */
-*{box-sizing: border-box; transition: all 0.3s;user-select: none;word-break: keep-all;}
+*{box-sizing: border-box;user-select: none;word-break: keep-all;}
 html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,
 aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,
 summary,time { margin:0; padding:0; }
@@ -175,6 +175,22 @@ button{ background: transparent;border: none; cursor: pointer;}
   height: 100%;
 }
 
+/* @media screen and (max-width: 1400px){
+  body{
+    overflow-x: scroll !important;
+    overflow: scroll !important;
+  }
+
+  .container{
+    overflow-x: scroll !important;
+    min-width: 1920px;
+  }
+
+  .scroll_x{
+    overflow-x: scroll !important;
+  }
+}
+
 @media screen and (max-width: 1366px){
   html{
     font-size: 18px;
@@ -188,6 +204,11 @@ button{ background: transparent;border: none; cursor: pointer;}
 
   .views_1280{
     display: block;
+  }
+} */
+@media screen and (max-width: 1480px){
+  .none_1480{
+    display: none;
   }
 }
 

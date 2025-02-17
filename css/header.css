@@ -136,15 +136,133 @@ a.logo{
 /***************
 MENU
 ****************/
-#fp-nav{
+.desc_nav_custom{
+  position: relative;
+  font-size: 30px;
+  font-family: ghanachoco;
+  background: linear-gradient(180deg, #FFF 20.11%, #A8A8A8 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 34px;
+}
+
+.desc_nav_custom:hover{
+  background: linear-gradient(180deg, #FFEB6F 8.33%, #FF9B33 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc_nav_custom span{
+  left: -3.45px;
+  width: 11px;
+  height: 11px;
+  background: #FFBC47;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  -webkit-transition: all 0.1sease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1sease-in-out;
+}
+
+.desc_nav_inner{
+  position: absolute;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 5px 40px 10px;
+}
+
+#desc_nav_inner_1{
+  top: 45%;
+}
+
+#desc_nav_inner_2{
+  top: 59%;
+}
+
+#desc_cs_nav_1, #desc_cs_nav_2, #desc_cs_nav_3, #desc_cs_nav_4, #desc_cs_nav_5{
   width: 100%;
-  max-width:11rem;
-  height: 700px;
-  padding:1rem 1.5rem;
-  background: rgba(0,0,0,0.5);
+  height: 100% !important;
+  padding: 0;
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 20px;
+  opacity: 100%;
+  color: #fff;
+  background: linear-gradient(180deg, #FFF 20.11%, #A8A8A8 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+#desc_cs_nav_1:hover, #desc_cs_nav_2:hover, #desc_cs_nav_3:hover, #desc_cs_nav_4:hover, #desc_cs_nav_5:hover{
+  /* background: linear-gradient(180deg, #FFEB6F 8.33%, #FF9B33 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+#fp-nav ul li:nth-child(3){
+  margin-bottom: 60px;
+}
+
+#fp-nav ul li:nth-child(7){
+  margin-bottom: 100px;
+}
+
+#desc_cs_1 {
+  position: relative; /* 절대 위치를 설정하기 위해 상대 위치로 설정 */
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+#desc_cs_1.hover-effect, #desc_cs_2.hover-effect {
+  top: -4px;
+  left: -6px;
+  width: 26px;
+  height: 29px;
+  background: url(../images/icon_point.png) no-repeat center / contain;
+}
+
+#desc_cs_1.hover-effect span, #desc_cs_2.hover-effect span{
+  opacity: 0;
+}
+
+/* hover 시 p 태그 스타일 */
+#fp-nav ul li #desc_cs_p_1.hover-effect, #fp-nav ul li #desc_cs_p_2.hover-effect {
+  background: linear-gradient(180deg, #FFEB6F 8.33%, #FF9B33 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#fp-nav ul #nav_none_1, #fp-nav ul #nav_none_2, #fp-nav ul #nav_none_3, #fp-nav ul #nav_none_4{
+  display: none;
+}
+
+ /**/
+
+#fp-nav{
+  /* display: none; */
+  width: 100%;
+  max-width:430px;
+  height: 100vh;
+  padding: 20px 24px 20px 47px;
+  /* background:url('../images/bg_nav.png') no-repeat center / cover; */
   top: 50%;
   transform: translate(0, -50%);
   margin-top: unset !important;
+  transition: all 0.2s;
 /*   height: 465px; */
 /*   border-left: 1px solid #9e9e9e; */
 }
@@ -186,12 +304,12 @@ MENU
 }
 
 #fp-nav ul li:hover a, .fp-slidesNav ul li:hover a{
-  top: -8px;
-  left: -2px;
-  width: 18px;
-  height: 18px;
-  background: url('../images/nav_active.png') no-repeat center / contain;
-  transition: all 0.3s;
+  top: -4px;
+  left: -6px;
+  width: 26px;
+  height: 29px;
+  background: url('../images/icon_point.png') no-repeat center / contain;
+  transition: all 0.1s;
   z-index: 999;
 }
 
@@ -220,7 +338,7 @@ MENU
 
 #fp-nav ul li a, .fp-slidesNav ul li a{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -233,17 +351,17 @@ MENU
 
 #fp-nav ul li, .fp-slidesNav ul li{
   left: -7px;
-  padding: 1.2rem 0;
+  padding: 24px 0;
 }
 
-#fp-nav ul li #tooltip-3, #fp-nav ul li #tooltip-4, #fp-nav ul li #tooltip-6, #fp-nav ul li #tooltip-7{
+/* #fp-nav ul li #tooltip-3, #fp-nav ul li #tooltip-4, #fp-nav ul li #tooltip-6, #fp-nav ul li #tooltip-7{
   font-family: GmarketSansMedium;
   font-size: 20px;
   background: var(--, linear-gradient(180deg, #FFF 20.11%, #A8A8A8 81.94%));
-}
+} */
 
 #fp-nav ul li a{
-  height: 18px;
+  height: 29px;
 }
 
 .tool_deco{
@@ -280,7 +398,8 @@ position:relative
 #fp-nav ul{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: center;
+  gap: 30px;
 	position:relative
 }
 
@@ -294,6 +413,18 @@ position:relative
   height: calc(100% - 2.4rem); /* 위 아래 여백 합계만큼 높이에서 제외 */
   background: linear-gradient(180deg, rgba(255, 206, 136, 0.00) 0%, #FFC055 19.5%, #FFA800 51.5%, #FFBB45 76%, rgba(255, 206, 136, 0.00) 100%);
   transform: translateX(-50%); /* X축 기준으로 중앙 정렬 */
+}
+
+
+#fp-nav ul li:nth-child(12),
+#fp-nav ul li:nth-child(13),
+#fp-nav ul li:nth-child(14),
+#fp-nav ul li:nth-child(15),
+#fp-nav ul li:nth-child(16),
+#fp-nav ul li:nth-child(17),
+#fp-nav ul li:nth-child(18),
+#fp-nav ul li:nth-child(19){
+  display: none;
 }
 /************여기 까지*************/
 /***************
@@ -712,16 +843,16 @@ SNS MENU
 ***********************/
 .m_nav{
    position: absolute;
-    display: none;
-    top: 0;
-    right: 0;
-    width: 30%;
-    min-width: 220px;
-    height: 100vh;
-    background: #000;
-    padding-top: 3rem;
-    overflow: visible;
-    z-index: 999;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 30%;
+  min-width: 220px;
+  height: 100vh;
+  background: #000;
+  padding-top: 3rem;
+  overflow: visible;
+  z-index: 999;
 }
 
 .btn_m_close{
@@ -743,15 +874,14 @@ SNS MENU
 
 .m_nav.active{
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .m_nav ul{
   margin-top: 30px;
 }
 
-.m_nav ul li{
-	margin-left:4rem;
-}
 
 .m_nav ul li a{
   padding: 15px 0;
@@ -779,8 +909,7 @@ SNS MENU
     height: 2.2rem;
     padding: 0.2rem;
 	margin-left:0.5rem;
-    background: url(../images/m/btn_menu_open.png) no-repeat center / contain; 
-    border: 1px solid #fff;
+    background: url(../images/btn_m_menu.svg) no-repeat center / contain;
     font-size: 0;
 }
 
@@ -811,14 +940,23 @@ SNS MENU
   right: 30px;
 }
 
+@media screen and (max-width: 1480px){
+  #fp-nav, .gnb h1{
+    display: none;
+  }
+
+  .gnb{
+    padding: 20px;
+  }
+
+  .mobile{
+    display: block;
+  }
+}
+
 
 @media screen and (max-width: 1440px){
   /* Header */
-  .gnb{
-    width: 100vw;
-    padding: 2vw 3vw;
-  } 
-
   .nav ul li a{
     width: 10vw;
     font-size: 1.2vw;

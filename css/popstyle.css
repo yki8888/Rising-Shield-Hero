@@ -449,9 +449,9 @@ POPUP
     display: block;
 }
 
-.pop-wrap-desc{
+/* .pop-wrap-desc{
     height: 140px;
-}
+} */
 
 /* POPUP. 공통 */
 .wrap_pop{
@@ -574,4 +574,53 @@ POPUP
 
 .desc_pop_collection_2 {
     flex: 7;
+}
+
+.pop-common-cont{
+    gap: 30px;
+}
+
+.num-invite{
+    flex: 1;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.btn_num_invite{
+    width: 170px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #91763F;
+}
+
+#num_invite_phone::placeholder, #num_invite_url::placeholder {
+    color: #fff;
+    font-weight: 400;
+}
+
+.box_num_invite{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.pop-friend-desc{
+    color: #91763F;
+    font-size: 18px;
+}
+
+.pop-friend-wrap{
+    height: 160px;
+}
+
+.friend_area{
+    display: flex;
 }

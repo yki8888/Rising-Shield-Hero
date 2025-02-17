@@ -1,0 +1,546 @@
+._4-page,
+._4-page * {
+  box-sizing: border-box;
+}
+._4-page {
+  background: var(--bgev2, undefined);
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+.content {
+  /* display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1060px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%; */
+}
+.frame-39 {
+  padding: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.sub-title-small {
+  padding: 3px 0px 2px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 39px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.div {
+  background: var(
+    --,
+    linear-gradient(
+      180deg,
+      rgba(255, 245, 147, 1) 0%,
+      rgba(255, 151, 48, 1) 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Ghanachocolate-Regular", sans-serif;
+  font-size: 69px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  position: relative;
+  -webkit-text-stroke: 1px var(--, rgba(255, 246, 172, 0.54));
+}
+.ev2-sub-deco-box {
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-50 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 15px;
+  position: relative;
+}
+.frame-46 {
+  width: 20px;
+  height: 15px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  translate: 0 -50%;
+  overflow: hidden;
+}
+.deco-2-2 {
+  width: 476px;
+  height: 15px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 476/15;
+}
+.frame-45 {
+  height: 15px;
+  position: absolute;
+  right: 17px;
+  left: 20px;
+  top: 50%;
+  translate: 0 -50%;
+  overflow: hidden;
+}
+.deco-wide-top-1 {
+  width: 1060px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1060/15;
+}
+.frame-48 {
+  width: 17px;
+  height: 15px;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  translate: 0 -50%;
+  overflow: hidden;
+}
+.deco-2-22 {
+  width: 476px;
+  height: 15px;
+  position: absolute;
+  left: -458px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 476/15;
+}
+.sub-title-small2 {
+  padding: 3px 14px 2px 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 39px;
+  position: relative;
+  overflow: hidden;
+}
+.event-12 {
+  background: var(
+    --,
+    linear-gradient(
+      180deg,
+      rgba(255, 253, 251, 1) 15.999999642372131%,
+      rgba(253, 200, 126, 1) 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  position: relative;
+}
+.deco-1-1 {
+  width: 476px;
+  height: 15px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 476/15;
+}
+.deco-wide-bottom-1 {
+  width: 1060px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1060/15;
+}
+.deco-1-12 {
+  width: 476px;
+  height: 15px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 476/15;
+}
+.card-step {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-shrink: 0;
+  width: 1060px;
+  position: relative;
+}
+.frame-41 {
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.frame-36 {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 257px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-362 {
+  padding: 13px 0px 13px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.step-1 {
+  color: var(--100, #ffffff);
+  text-align: left;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.frame-37 {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 93px;
+  position: relative;
+  overflow: hidden;
+}
+.url {
+  color: var(--700, #3c2f23);
+  text-align: center;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.event-2-card {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+.event-2-card-01 {
+  width: 282px;
+  height: 279px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  object-fit: cover;
+  aspect-ratio: 282/279;
+}
+.point {
+  padding: 64px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.group-1 {
+  flex-shrink: 0;
+  width: 37.52px;
+  height: 37.52px;
+  position: relative;
+  overflow: visible;
+}
+.frame-42 {
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.ev2-frame-372 {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 257px;
+  height: 144px;
+  position: relative;
+  overflow: hidden;
+}
+.step-2 {
+  color: var(--100, #ffffff);
+  text-align: left;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.frame-373 {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.ev2-div2 {
+  color: var(--700, #3c2f23);
+  text-align: center;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.event-2-card-02 {
+  width: 282px;
+  height: 279px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  object-fit: cover;
+  aspect-ratio: 282/279;
+}
+.group-12 {
+  flex-shrink: 0;
+  width: 37.52px;
+  height: 37.52px;
+  position: relative;
+  overflow: visible;
+}
+.frame-43 {
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.frame-38 {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 257px;
+  height: 144px;
+  position: relative;
+  overflow: hidden;
+}
+.step-3 {
+  color: var(--100, #ffffff);
+  text-align: left;
+  font-family: "GmarketSansTtf-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.event-2-card-03 {
+  width: 282px;
+  height: 279px;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  object-fit: cover;
+  aspect-ratio: 282/279;
+}
+.invitation {
+  /* padding: 0px 38px 0px 38px; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.input {
+  background: #ffffff;
+  flex: 1;
+  height: 62px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-invitation-link {
+  flex-shrink: 0;
+  width: 243px;
+  height: 62px;
+  position: relative;
+}
+.btn-invitation-link2 {
+  width: 243px;
+  height: 62px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 243/62;
+}
+.btn-invitation-ok {
+  flex-shrink: 0;
+  width: 243px;
+  height: 62px;
+  position: relative;
+}
+.btn-invitation-ok2 {
+  width: 243px;
+  height: 62px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 243/62;
+}
+.frame-44 {
+  /* padding: 0px 38px 0px 38px; */
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.check-label {
+  flex-shrink: 0;
+  width: 352px;
+  height: 100%;
+  position: relative;
+}
+.div3 {
+  color: var(--100, #ffffff);
+  text-align: left;
+  font-family: "GmarketSansTtf-Medium", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+}
+.check {
+  background: var(--900, #000000);
+  border-style: solid;
+  border-color: var(--100, #ffffff);
+  border-width: 4px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.btn-small-2 {
+  background: var(--900, #000000);
+  padding: 5px 22px 5px 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.div4 {
+  color: var(--100, #ffffff);
+  text-align: center;
+  font-family: "GmarketSansTtf-Medium", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+}
+.btn-small {
+  background: var(--900, #000000);
+  border-radius: 100px;
+  padding: 5px 22px 5px 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}

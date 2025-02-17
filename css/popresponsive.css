@@ -164,6 +164,7 @@
 .desc_pop {
     overflow-y: scroll;
 }
+}
 
 @media screen and (max-width : 520px){
 	h3{

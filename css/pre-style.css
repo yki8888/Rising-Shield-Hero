@@ -29,10 +29,12 @@
   align-items: center;
   justify-content: flex-start;
   width: 1060px;
+  height: fit-content;
   position: absolute;
   left: 50%;
-  translate: -50%;
-  top: calc(50% - 407.5px);
+  translate: -50%, -50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .frame-63 {
   padding: 0px 0px 20px 0px;

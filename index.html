@@ -56,6 +56,7 @@
   <script src="js/jquery.fullpage.js"></script>
   <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script src="js/scrolloverflow.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   <link rel="stylesheet" href="css/base.css?ver=20231121" />
@@ -65,7 +66,17 @@
   <link rel="stylesheet" href="css/popstyle.css" />
   <link rel="stylesheet" href="css/style.css?ver=20231206" />
   <link rel="stylesheet" href="css/pre-style.css" />
+  <link rel="stylesheet" href="css/ev1-style.css" />
+  <link rel="stylesheet" href="css/ev2-style.css" />
+  <link rel="stylesheet" href="css/intro-style.css" />
+  <link rel="stylesheet" href="css/game-style.css" />
+  <link rel="stylesheet" href="css/char-style.css" />
+  <link rel="stylesheet" href="css/media-style.css" />
   <link rel="stylesheet" href="css/responsive.css?ver=20231207" />
+  <style>
+    .ani_box{cursor:pointer; max-width: 750px; min-width: 300px; width: 100%; margin: 0 auto}
+    .logo_box{ max-width: 600px; min-width: 320px; width: 100%; margin: 0 auto}
+  </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- Meta Pixel Code -->
   <!-- End Meta Pixel Code -->
@@ -74,13 +85,14 @@
 <!--HEADER-->
 <header class="gnb">
   <h1><a class="logo" href="/">방패용사 성공담 RISE</a></h1>
+  <button type="button" class="btn_nav_open mobile">Open Menu</button>
 
   <div class="gnb_right">
     <nav class="sns">
       <ul>
-        <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_apple">App Store에서 사전 주문하기</a></li>
-        <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_google">Google Play 사전 등록하기</a></li>
-        <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_go">사전예약하기</a></li>
+        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_apple">App Store에서 사전 주문하기</a></li>
+        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_google">Google Play 사전 등록하기</a></li>
+        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_go">사전예약하기</a></li>
         <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_ncafe">NaverCafe</a></li>
         <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_youtube">Youtube</a></li>
         <li>
@@ -92,22 +104,17 @@
                   <a href="#n" class="btn_top">top</a>
                   <a href="#n" class="btn_x">X</a>
                   <a href="#n" class="btn_facebook">Facebook</a>
-                  <a href="#n" class="btn_link">copy</a>
+                  <a href="#n" class="btn_link btn_link_copy">copy</a>
               </div>
           </div>
         </li>
           </ul>
       </nav>
 
-      <button type="button" class="btn_nav_open mobile">Open Menu</button>
+      
 
       <nav class="m_nav btn_nav_close">
         <div class="m_nav_top">
-
-          <button onclick="openPopDetail('{{ $loginUrl }}')" class="btn_login font_w">로그인</button>
-
-          <button class="btn_login_m font_w btn_overflow">마이페이지</button>
-
           <button class="btn_m_close">X</button>
         </div>
           <ul>
@@ -124,74 +131,34 @@
           </ul>
       </nav>
 </header>
-    <!-- mobile_mypage2 -->
-    <div id="mypage_2" class="mypage_2">
-        <div class="wrap_mypage" style="color: #fff;">
-            <div class="ttl_my">
-                <button id="btn_logout" class="font_w" onclick="">로그아웃</button>
-                <p class="font_b_1" style="font-size: 1.5rem; font-family: Sandoll GyeokdongG2;">마이페이지</p>
-                <div class="learn_check_close btn_overhide" onclick="$('#mypage_2').hide();">
-                    <button><img src="./images/btn_pop_close.png"></button>
-                </div>
-            </div>
 
-            <div class="cont_mypage">
-                <div class="v_status">
-                    <button id="btn_p_ev_2" class="btn_v_status">
-                        <p id="decs_p_ev_2" class="font_gray">포토카드 이벤트</p>
-                    </button>
-                </div>
-
-                <div class="a_status">
-                    <button id="btn_c_ev_2" class="btn_a_status">
-                        <p id="decs_c_ev_2" class="font_gray">캘린더 이벤트</p>
-                    </button>
-                </div>
-
-                <div class="ifl_manage">
-                    <button id="btn_f_ev_2" class="btn_ifl_manage">
-                        <p id="decs_f_ev_2" class="font_gray">팬미팅 이벤트</p>
-                    </button>
-                </div>
-            </div>
-
-            <div class="desc_v_status">
-                <div class="box_v_num">
-                    <div class="v_num_count">
-                        <p class="voting">응모 횟수</p>
-                        <p id="voting_num_4" class="font_bk"></p>
-                    </div>
-                </div>
-                <p>&#8251; 응모가 많을 수록 당첨 확률이 올라갑니다.</p>
-            </div>
-
-            <div class="desc_a_status">
-                <div class="box_v_num">
-                    <div class="v_num_count">
-                        <p class="voting">응모 횟수</p>
-                        <p id="voting_num_5" class="font_bk"></p>
-                    </div>
-                </div>
-                <p>&#8251; 응모가 많을 수록 당첨 확률이 올라갑니다.</p>
-            </div>
-
-            <div class="desc_ifl_manage">
-                <div class="box_v_num">
-                    <div class="v_num_count">
-                        <p class="voting">응모 횟수</p>
-                        <p id="voting_num_6" class="font_bk"></p>
-                    </div>
-                </div>
-                <p>&#8251; 응모가 많을 수록 당첨 확률이 올라갑니다.</p>
-            </div>
-        </div>
-    </div>
-    <!--//mobile_mypage2 -->
+<nav id="fp-nav" class="_gnb" style="z-index: 999;">
+  <ul>
+      <li><a href="#main" data-menuanchor="main"><span></span></a><p class="fp-tooltip left">메인</p></li>
+      <li><a href="#prereg" data-menuanchor="prereg"><span></span></a><p class="fp-tooltip left">사전예약</p> </li>
+      <li><a id="desc_cs_1" href="#ahcv" data-menuanchor="ahcv"><span></span></a><p id="desc_cs_p_1" class="fp-tooltip left">이벤트</p> </li>
+      <div id="desc_nav_inner_1" class="desc_nav_inner">
+        <p id="desc_cs_nav_1" href="#ahcv" class="font_gmarket">- 사전예약 달성</p>
+        <p id="desc_cs_nav_2" href="invite" class="font_gmarket">- 친구초대</p>
+      </div>
+      <li id="nav_none_1"><a href="#ahcv" data-menuanchor="ahcv"><span></span></a><p class="fp-tooltip left">사전예약 달성</p></li>
+      <li id="nav_none_2"><a href="#invite" data-menuanchor="invite"><span></span></a><p class="fp-tooltip left">친구초대</p></li>
+      <li><a id="desc_cs_2" href="#world" data-menuanchor="world"><span></span></a><p id="desc_cs_p_2" class="fp-tooltip left">게임소개</p></li>
+      <div id="desc_nav_inner_2" class="desc_nav_inner">
+        <p id="desc_cs_nav_3" href="#world" class="font_gmarket">- 세계관</p>
+        <p id="desc_cs_nav_4" href="#char" class="font_gmarket">- 캐릭터</p>
+        <p id="desc_cs_nav_5" href="#gamestic" class="font_gmarket">- 게임 특징</p>
+      </div>
+      <li id="nav_none_3"><a href="#char" data-menuanchor="char"><span></span></a><p class="fp-tooltip left">캐릭터</p></li>
+      <li id="nav_none_4"><a href="#gamestic" data-menuanchor="gamestic"><span></span></a><p class="fp-tooltip left">게임특징</p></li>
+      <li><a href="#medias" data-menuanchor="medias"><span></span></a><p class="fp-tooltip left">미디어</p></li>
+  </ul>
+</nav>
 
 <!--POP-UP : Youtube-->
 <div class="popup_video_mask" class="wrap_pop">
   <div class="popup_video">
-      <button type="button" class="btn_muted btn_overhide" onclick="closeYoutube();">닫기</button>
+      <button type="button" class="btn_muted btn_overhide" onclick="closeYoutube();"><img class="ch-deco-topcenter" src="./images/btn_close.png" /></button>
       <div id="youtubePlayer"></div>
   </div>
 </div>
@@ -382,6 +349,7 @@
 </div>
 <!-- // 팝업 : 개인정보 수집 동의 -->
 
+<!-- 팝업 : 텍스트 한줄 공통 -->
 <div id="pop_desc" class="wrap_pop">
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
     <div class="pop-deco-top">
@@ -395,8 +363,8 @@
     </div>
     <div class="pop-wrap pop-wrap-desc">
       <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
-      <div class="pop-cont">
-        <h4 class="pop_title pop-ttl-desc font_gmarket_b">-</h4>
+      <div class="pop-cont pop-common-cont">
+        <h4 class="pop_title pop-ttl-desc font_gmarket_b desc_pop_common">-</h4>
         
         <button class="btn-pop-ok" onclick="$('#pop_desc').hide();">
           <p class="pop-ok-desc">확인</p>
@@ -416,18 +384,155 @@
   </div>
   <div class="check_bg"></div>
 </div>
+<!-- // 팝업 : 텍스트 한줄 공통 -->
+
+<!-- 팝업 : 친구초대 완료 -->
+<div id="popup_invite_complete" class="wrap_pop">
+  <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
+  <div class="pop-deco-top">
+    <div class="pop-deco-top-left">
+      <img class="tr-01" src="./images/tr-010.png" />
+    </div>
+    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+    <div class="pop-deco-top-right">
+      <img class="tr-02" src="./images/tr-020.png" />
+    </div>
+  </div>
+  <div class="pop-wrap">
+    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+    <div class="pop-cont">
+      <h4 class="pop_title font_gmarket_b">방패용사 성공담 RISE</h4>
+      <h5 class="pop-desc-s font_gmarket_b">친구초대 이벤트에 참여해주셔서 감사합니다.</h5>
+      <div class="pop-bar"></div>
+      <p class="pop-desc-xs font_gmarket_b">하기의 링크를 복사하여 친구들을 초대해보세요.</p>
+      
+      <div class="box_num_invite">
+        <input type="tel" id="num_invite_phone" class="num-invite font_gmarket" name="phone" value="" pattern="^[1-9]{1}[0-9]*" placeholder="'-'을 제외하고 숫자만 입력해 주세요." maxlength="" autocomplete='off'>
+        <button type="button" class="btn_num_invite"><p class="font_gmarket_b font_w">입력완료</p></button>
+      </div>
+      <div class="box_num_invite">
+        <input type="tel" id="num_invite_url" class="num-invite font_gmarket" name="phone" value="" pattern="^[1-9]{1}[0-9]*" placeholder="내 친구 초대 URL" maxlength="" autocomplete='off'>
+        <button type="button" class="btn_num_invite"><p class="font_gmarket_b font_w">복사하기</p></button>
+      </div>
+      
+      <button class="btn-pop-ok" onclick="$('#popup_invite_complete').hide();">
+        <p class="pop-ok-desc">확인</p>
+      </button>
+    </div>
+    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+  </div>
+  <div class="pop-deco-bottom">
+    <div class="pop-deco-bottom-left">
+      <img class="tr-03" src="./images/tr-030.png" />
+    </div>
+    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <div class="pop-deco-bottom-right">
+      <img class="tr-04" src="./images/tr-040.png" />
+    </div>
+  </div>
+</div>
+  <div class="check_bg"></div>
+</div>
+<!-- // 팝업 : 친구초대 완료 -->
+
+<!-- 팝업 : 초대한 친구 수 -->
+<div id="popup_friend" class="wrap_pop">
+  <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
+  <div class="pop-deco-top">
+    <div class="pop-deco-top-left">
+      <img class="tr-01" src="./images/tr-010.png" />
+    </div>
+    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+    <div class="pop-deco-top-right">
+      <img class="tr-02" src="./images/tr-020.png" />
+    </div>
+  </div>
+  <div class="pop-wrap pop-friend-wrap">
+    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+    <div class="pop-cont">
+      <div class="friend_area">
+        <h4 class="pop_title font_gmarket_b">현재 당신이 초대한 친구 수는</h4>
+        <div class="friend_underline" style="border-bottom: 2px solid #91763F; padding: 0 10px; margin: 0 10px;"><h4 class="pop_title font_gmarket_b" style="padding: 0 8px;">10</h4></div>
+        <h4 class="pop_title font_gmarket_b">명 입니다.</h4>
+      </div>
+        <p class="pop-friend-desc font_gmarket">* 유의사항 : 생성된 URL로 등록하지 않은 친구는 카운트에서 제외됩니다.</p>
+      <button class="btn-pop-ok" onclick="$('#popup_friend').hide();">
+        <p class="pop-ok-desc">확인</p>
+      </button>
+    </div>
+    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+  </div>
+  <div class="pop-deco-bottom">
+    <div class="pop-deco-bottom-left">
+      <img class="tr-03" src="./images/tr-030.png" />
+    </div>
+    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <div class="pop-deco-bottom-right">
+      <img class="tr-04" src="./images/tr-040.png" />
+    </div>
+  </div>
+</div>
+  <div class="check_bg"></div>
+</div>
+<!-- // 팝업 : 초대한 친구 수 -->
+
+<!-- 팝업 : 캐릭터 공통 팝업 -->
+<div id="pop_char" class="wrap_pop">
+  <div class="cont_char_pop">
+    <div class="ch-pop" style="background: url(./images_char/ch-pop.png) center; background-size: cover; background-repeat: no-repeat;">
+      <img class="char_pop" src="" />
+      <div class="ch-deco-top">
+      <div class="ch-deco-top-left">
+        <img class="tr-01" src="./images_char/tr-010.png" />
+      </div>
+      <img class="ch-deco-topcenter" src="./images_char/ch-deco-topcenter0.png" />
+      <div class="ch-deco-top-right">
+        <img class="tr-02" src="./images_char/tr-020.png" />
+      </div>
+    </div>
+    <div class="ch-deco-middle">
+      <img class="ch-deco-middle-left" src="./images_char/ch-deco-middle-left0.png" />
+      <div class="ch-deco-middle-center">
+        <h3 class="name_char_pop font_gmarket_b">이와타니 나오후미</h3>
+        <div class="ch-history">
+          <div class="textarea_pop_char">
+            <p class="_0 desc_char_pop">-</p>
+          </div>
+        </div>
+      </div>
+      <img class="ch-deco-middile-right" src="./images_char/ch-deco-middile-right0.png" />
+    </div>
+    <div class="ch-deco-bottom">
+      <div class="ch-deco-bottom-left">
+        <img class="tr-03" src="./images_char/tr-030.png" />
+      </div>
+      <img class="ch-deco-bottom-center" src="./images_char/ch-deco-bottom-center0.png" />
+      <div class="ch-deco-bottom-right">
+        <img class="tr-04" src="./images_char/tr-040.png" />
+      </div>
+    </div>
+    </div>
+    <button class="btn-pop-char-close" onclick="$('#pop_char').hide();"><img class="ch-deco-topcenter" src="./images/btn_close.png" /></button>
+  </div>
+  <div class="check_bg"></div>
+</div>
+<!-- // 팝업 : 텍스트 한줄 공통 -->
+
 
 <main class="container">
   <div id="fullpage">
 
     <!--01. 메인 -->
-    <section id="main-page" class="section fp-auto-height-responsive subsection" data-color="white" data-anchor="main">
+    <section id="main-page" class="section fp-auto-height-responsive subsection scroll_x" data-color="white" data-anchor="main">
       <article class="intro_cont">
         <div class="main_box">
-          <h2>방패용사 성공담 RISE</h2>
+          <!-- <h2>방패용사 성공담 RISE</h2>
           <button class="btn_play btn_overflow" onclick="openYoutube('Yr-90OpqBqQ');"></button>
           <img src="./images/main_desc.png">
-          <a href="#event" class="btn_main_pre"></a>
+          <a href="#event" class="btn_main_pre"></a> -->
+          <div id = "main_logo" class="logo_box"></div>		
+          <button class="btn_play btn_overflow" onclick="openYoutube('Yr-90OpqBqQ');"></button>
+          <div id = "animContainer" class="ani_box"></div>	
         </div>
         <div class="mask"></div>
       </article>
@@ -435,7 +540,7 @@
     <!-- // 01. 메인 -->
 
     <!-- 02. 사전예약 -->
-    <section id="advance" class="section fp-auto-height-responsive subsection" style="background: url(./images_pre/advance.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="prereg">
+    <section id="pre" class="section fp-auto-height-responsive subsection scroll_x" style="background: url(./images_pre/advance.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="prereg">
     <div class="rectangle-9"></div>
     <div class="content">
       <div class="frame-63">
@@ -575,605 +680,401 @@
   </section>
   <!-- // 02. 사전예약 -->
 
-    
-
-
-       <!--03. Vote-->
-        <section id="vote" class="section" data-anchor="event">
-            <article class="grid">
-                <h3><img class="sgb_intro_logo neon-effect" alt="슈퍼걸스배틀 소개" src="./images/logo_sgb_intro.png"/>슈퍼걸스배틀 소개</h3>
-                <div class="wrap">
-                    <div class="cont_vote_1">
-                        <div class="desc_center ttl_vote">
-
-                            <strong class="font_w coming">Coming soon</strong>
-                            <p class="font_w">8인의 슈퍼걸스를 기대하라!</p>
-
-
-
-                        </div>
-
-                        <div class="cont_girls">
-                            <!-- <img class="pc girls" alt="슈퍼걸스" src="./images/girls.png"/> -->
-
-                        </div>
-                    </div>
-                    <div class="cont_vote_2">
-                        <div class="wrap">
-
-                            <p class="desc_center">지금 바로 8인의 슈퍼걸스를 만나보세요!</p>
-
-
-
-                            <div class="cont_vote">
-
-                                <div class="vote_box">
-
-                                    <div class="vote_lump">
-                                        <div class="vote_flex">
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_1"></div>
-                                                            <div class="inf_img_c_1"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">박민정</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button1" class="btn_vote btn_vote_1 font_w btn_overflow" onclick="openYoutube('v4n_sboHHJo');">민정 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_2"></div>
-                                                            <div class="inf_img_c_2"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">장은비</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button2" class="btn_vote btn_vote_2 font_w btn_overflow" onclick="openYoutube('K1OmGJ1Bs3Q');">은비 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_3"></div>
-                                                            <div class="inf_img_c_3"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">김지원</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button3" class="btn_vote btn_vote_3 font_w btn_overflow" onclick="openYoutube('3gyMeJehFQM');">지원 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_4"></div>
-                                                            <div class="inf_img_c_4"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">김갑주</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button4" class="btn_vote btn_vote_4 font_w btn_overflow" onclick="openYoutube('kmNpV6S5pEw');">갑주 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_5"></div>
-                                                            <div class="inf_img_c_5"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">김우현</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button5" class="btn_vote btn_vote_5 font_w btn_overflow" onclick="openYoutube('RD_UQVsE69Y');">우현 프로모션 영상</button>>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_6"></div>
-                                                            <div class="inf_img_c_6"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">조현영</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button6" class="btn_vote btn_vote_6 font_w btn_overflow" onclick="openYoutube('ceZh7jGotXQ');">현영 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_7"></div>
-                                                            <div class="inf_img_c_7"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">김다정</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button7" class="btn_vote btn_vote_7 font_w btn_overflow" onclick="openYoutube('m1-9R-eZx2g');">다정 프로모션 영상</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="influencer_box">
-                                                <div class="influencer">
-                                                    <div class="inf_bg">
-                                                        <div class="inf_char_1">
-                                                            <div class="inf_img_s_8"></div>
-                                                            <div class="inf_img_c_8"> </div>
-                                                        </div>
-                                                        <div class="box_inf_name">
-                                                            <p class="inf_name">고말숙</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="vote_btn_cont">
-                                                    <button id="button8" class="btn_vote btn_vote_8 font_w btn_overflow" onclick="openYoutube('7DWwxFtVNBY');">말숙 프로모션 영상</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!--//03. Vote-->
-
-      <!--04_1. Vevent 포토카드 이벤트-->
-	  <section id="vevent" class="section" data-anchor="achv">
-		<article class="grid">
-		  <h3 class="font_w">슈퍼걸스 <br class="br_520">포토카드 이벤트</h3>
-		  <p class="desc_center font_w">이벤트 기간 : 2023년 11월 23일 ~ 2023년 11월 30일</p>
-			<div class="cont_vevent">
-			  <div class="box_evevt">
-				<div class="lump_vevent">
-				  <div class="card">
-                    <p class="font-s">매일 매일 이벤트 응모하고 <br class="br_520"><span class="font_b_1">슈퍼걸스 포토카드 세트</span>를 받으세요!</p>
-                        <button class="btn_photo font-s font_w" onclick="openPopDetail('{{ $loginUrl }}')">응모하기</button>
-				  </div>
-				</div>
-				  <div class="lump_box_photo">
-					<div class="box_photo">
-					  <div class="photo"><img class="" alt="박민정카드" src="./images/card_1.png"/></div>
-					  <div class="photo2"><img class="" alt="장은비 카드" src="./images/card_2.png"/></div>
-					  <div class="photo"><img class="" alt="김지원 카드" src="./images/card_3.png"/></div>
-					  <div class="photo2"><img class="" alt="김갑주 카드" src="./images/card_4.png"/></div>
-					  <div class="photo2"><img class="" alt="김우현 카드" src="./images/card_5.png"/></div>
-					  <div class="photo"><img class="" alt="조현영 카드" src="./images/card_6.png"/></div>
-					  <div class="photo2"><img class="" alt="김다정 카드" src="./images/card_7.png"/></div>
-					  <div class="photo"><img class="" alt="고말숙 카드" src="./images/card_8.png"/></div>
-					</div>
-				  </div>
-				  <div class="box_photo_check">
-
-					<div class="tip">
-					  <p class="font_w">&#8251; 당첨자 발표는 2023년 12월 7일 <br class="br_520">본 페이지 및 공식 카페에서 발표됩니다.</p>
-					  <div class="tip_bottom">
-						<p class="emp font_w"><span class="inner_tip">TIP!</span> 이벤트 응모가 많으면 당첨 확률은 더 높아져요!</p>
-						<button class="btn_notice_vevent font_w font_xs btn_overflow" onclick="$('#wrap_pop_event_notice').show();"><img src="./images/icon_vevent.png">이벤트 유의사항</button>
-					  </div>
-					</div>
-				  </div>
-			  </div>
-			  <div class="cont_vevent_bottom"></div>
-			  <div class="vevent_char"><img class="" alt="카드" src="./images/box_photo_char_2.png"/></div>
-			</div>
-
-
-		</article>
-	  </section>
-	  <!--//04_1. Vevent-->
-
-      <!--04_2. fevent 친구초대 이벤트-->
-      <section id="fevent" class="section fp-auto-height-responsive" data-anchor="invite">
-        <article class="grid">
-          <h3 class="font_w">슈퍼걸스와 함께하는 <br class="br_520">친구초대 이벤트</h3>
-          <p class="desc_center font_w">이벤트 기간 : 2023년 11월 30일 ~ 2023년 12월 6일</p>
-          <img class="char_fevent" alt="character" src="./images/fevent_char_right.png">
-          <div class="cont_fevent_wrap">
-            <div class="cont_fevent">
-              <div class="cont_left">
-                <p>슈퍼걸스대전에 친구 초대하고 <br />역대급 경품의 행운까지!</p>
-                <img alt="character" class="reward" src="./images/cont_fevent_reward.jpg">
-              </div>
-              <div class="cont_right">
-                <div class="how_apply">
-                  <p>참여 방법</p>
-                  <div class="how_apply_cont">
-                    <ul>
-                      <li><span>1</span> 사전 예약 후 나의 초대 URL 확인하기</li>
-                      <li><span>2</span> 나의 초대 URL을 SNS, 블로그에 알리기</li>
-                      <li><span>3</span> 친구가 내 URL로 사전 예약 참여하기</li>
-                      <li><span>4</span> 초대한 친구 순위를 올려 역대급 경품 받기</li>
-                    </ul>
-                          <button class="btn_checkUrl" onclick="alert('사전 예약을 먼저 참여해 주세요');">나의 URL
-                              확인하기</button>
-                          <!-- <button class="btn_checkUrl" onclick="openModal('#wrap_pop_mevent_url', 'pink')">나의 URL
-                              확인하기</button> -->
-                  </div>
-                </div>
-                <div class="notice_fevent">
-                  <p>유의 사항</p>
-                  <ul>
-                    <li>초대한 친구가 사전 예약에 참여해야 초대수로 인정 됩니다.</li>
-                    <li>친구 초대 수가 동률일 경우 사전 예약 일자가 빠른 기준으로 순위가 결정됩니다.</li>
-                    <li>당첨 유저에 한 해 게임 런칭 이후 개별적으로 연락드릴 예정입니다.</li>
-                    <li>5만원 이상의 경품은 제세공과금 22%를 지급하여야 최종 당첨됩니다.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn_notice_event btn_overflow" onclick=" openModal('#wrap_pop_event_notice', 'pink' )">이벤트 유의사항</button>
-          </div>
-        </article>  
-      </section>
-      <!--//04_2. fevent-->
-
-
-	  <!--06. World-->
-	  <section id="world" class="section fp-auto-height-responsive" data-anchor="intro">
-		<article class="grid_world grid">
-
-		  <div class="wrap_world wrap">
-			<div class="world_cont">
-			  <h3 class="font_w ttl_world">세계관</h3>
-			  <div class="world_text">
-				<p class="desc_world font_w font-xs">즐겨하던 게임 최종 클리어를 위한 마지막 퀘스트를<br class="br_1024 br_520"> 통과하여 관문을 넘으려던 순간!<br>시스템 내부에서 버그가 생기며 게임과 <br class="br_520">현실 세계의 붕괴가 시작됐다.<br><br>게임 속 버그들은 다양한 형태로 <br class="br_390">현실 세계에 실체화되어 <br class="br_1024 br_520">사람들과 각종 시설을 공격하기 시작한다.<br><br> 동시에, 게임과 현실 사이의 붕괴로 인해 게임 속 <br class="br_1024 br_520">히로인들에게 '자아'가 생겼고,<br> 특별한 능력을 가지고 버그들을 상대해 나가는 <br class="br_520">이 존재들을 <br class="br_1024">'슈퍼걸스'라고 부르기로 한다. <br><br> 한편, 현실 세계에 있던 8명의 셀럽들과 GM 탁, <br class="br_520">CS 신 역시 경계가 <br class="br_1024">사라진 게임 속 <br class="br_520">세계로 빠져들고 마는데... <br><br> 게임 속 히로인들과 동등한 능력을 갖게 된 <br class="br_520">8명의 셀럽들은 <br class="br_1024">일반적인 캐릭터들과는 달리 <br class="br_pc br_520">GM 탁이 건립한 섬 <br class="br_pc"><br class="br_1024">'탁 아일랜드'에서 <br class="br_414">다양한 미션을 통해 <br class="br_1024 br_520">스스로를 성장시켜 현실과 게임 경계의 <br class="br_414">붕괴를 막기로 한다. <br>과연, 8명의 셀럽 중 역대급으로 <br class="br_520">성장할 슈퍼걸은 누가 될 것인가? <br><br> 디스토피아가 된 게임과 현실 세계를 구하고 <br class="br_1024 br_520">평화로웠던 예전으로 돌아갈 수 있을까?
-				</p>
-			  </div>
-			</div>
-		  </div>
-		</article>
-		<div class="wold_char_left"><img class="" alt="미리내" src="./images/world_char_left.png"/></div>
-		<div class="wold_char_center"><img class="" alt="미리내" src="./images/world_char_center.png"/></div>
-		<div class="wold_char_right"><img class="" alt="미리내" src="./images/world_char_right.png"/></div>
-
-    <div class="cld_wrap">
-      <div class="sky01"></div>
-      <div class="sky02"></div>
-      <div class="sky03"></div>
-      <div class="sky04"></div>
-    </div>
-	  </section>
-	  <!--//06. World-->
-
-	<!--07. Character-->
-	<section id="character" class="section fp-auto-height-responsive" data-anchor="char">
-		<article class="grid">
-			<h3 class="font_w">캐릭터 소개</h3>
-			<div class="wrap wrap_char">
-				<div class="character_slide">
-					<div class="swiper-wrapper character_list">
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char mirinae pc" alt="미리내" src="./images/cont_characte_1.png"/>
-										<img class="char mirinae mobile" alt="미리내" src="./images/m/m_cont_characte_1.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>미리내</h4>
-											<div class="box_voice">
-												<p>cv.김보나</p>
-												<button class="name_voice" onclick="playVoice('../audio/1_mirinae.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">이세계에 도착한 주인공의 일행 중 하나로 지휘관을 충심으로 섬긴다.<br>
-											미리내는 성실하고 의지가 강하며 언제나 지휘관의 버팀목이 되어 주고 격려한다.<br>
-											선량하지만 용감하고, 강한 선배들을 동경하는 정의로운 성품을 지녔다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="진아" src="./images/cont_characte_2.png"/>
-										<img class="char mobile" alt="진아" src="./images/m/m_cont_characte_2.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>진아</h4>
-											<div class="box_voice">
-												<p>cv.김유림</p>
-												<button class="name_voice" onclick="playVoice('../audio/2_jina.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">진아는 어마어마한 행운과 직감 능력으로 결정의 순간에  자신의 감을 최우선으로 믿는다.<br>
-											자신의 감에 따라 군주 채린 진영에 합류해 보아와 함께 채린을 따르고 있다.<br>밝은 성격으
-											로 주인공을 따르며, 스킨쉽을 좋아한다.<br>주인공의 훈련과 전투를 돕는 슈퍼걸이다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="주은" src="./images/cont_characte_3.png"/>
-										<img class="char mobile" alt="주은" src="./images/m/m_cont_characte_3.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>주은</h4>
-											<div class="box_voice">
-												<p>cv.방시우</p>
-												<button class="name_voice" onclick="playVoice('../audio/3_jueun.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">처음 이세계로 도착한 주인공에게 많은 도움을 주는 슈퍼걸이다.<br>모르는 게 없으며 미래를 읽는 능력이 아주 뛰어나지만, 사람에게 쌀쌀맞다.<br>실패를 두려워하기에 소극적이며, 무덤덤한 태도를 보이지만 누구보다 주인공을 든든하게 서포트해주는 슈퍼걸이다. </p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="채린" src="./images/cont_characte_4.png"/>
-										<img class="char mobile" alt="채린" src="./images/m/m_cont_characte_4.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>채린</h4>
-											<div class="box_voice">
-												<p>cv.오주희</p>
-												<button class="name_voice" onclick="playVoice('../audio/4_chaerin.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">세계의 끝없는 전쟁으로 인해 영토를 잃은 뒤, 오로지 자국 재건을 목표로 노력한다.<br>
-											주인공이 채린 일행을 받아준 뒤 주인공 일행에 협력한다.<br>채린은 짧은 시간 역행
-											능력을 구사하는 특별한 능력을 가지고 있다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="보아" src="./images/cont_characte_5.png"/>
-										<img class="char mobile" alt="보아" src="./images/m/m_cont_characte_5.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>보아</h4>
-											<div class="box_voice">
-												<p>cv.윈에스더</p>
-												<button class="name_voice" onclick="playVoice('../audio/5_boa.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">진아와 함께 채린의 곁을 따르는 채린 일행. 채린 세력이 함락된 후,<br>잠시 행방이
-											묘연했으나, 주인공을 만나여 채린, 진아와 재회한다.<br>주인공 일행에 합류하며 주인공과 채린을 지키는 든든한 슈퍼걸이다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="이유나" src="./images/cont_characte_6.png"/>
-										<img class="char mobile" alt="이유나" src="./images/m/m_cont_characte_6.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<div class="yuna">
-												<h4>이유나</h4>
-											</div>
-											<div class="box_voice">
-												<p>cv.유인선</p>
-												<button class="name_voice" onclick="playVoice('../audio/6_iyuna.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">책락이 뛰어나고 가늠하기 어려운 성격이다.<br>써니를 도와 다양한 일을 처리한다.<br>
-											군대를 이끌고 많은 세력들을 몰락시키지만, 그녀의 진짜 목적은 아직 불확실하다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="이진" src="./images/cont_characte_7.png"/>
-										<img class="char mobile" alt="이진" src="./images/m/m_cont_characte_7.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>이진</h4>
-											<div class="box_voice">
-												<p>cv.정해은</p>
-												<button class="name_voice" onclick="playVoice('../audio/7_leejin.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="font-xs char_introduction">아침부터 밤까지 일에 쫓기며 지내 늘 피곤해한다.<br>문무를 겸비한 활발한 성격이지만, 궁극의 지성으로 불리는 주은을 인생의 라이벌로 생각한다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="swiper-slide mirinae">
-							<div class="cont_char">
-								<div class="flex_char">
-									<div class="box_char">
-										<img class="char pc" alt="지민" src="./images/cont_characte_8.png"/>
-										<img class="char mobile" alt="지민" src="./images/m/m_cont_characte_8.png"/>
-									</div>
-									<div class="desc_char">
-										<p class="desc_sgb font_b_3">SUPER GIRLS BATTLE</p>
-										<div class="name_tag">
-											<h4>지민</h4>
-											<div class="box_voice">
-												<p>cv.윈에스더</p>
-												<button class="name_voice" onclick="playVoice('../audio/8_jimin.mp3')">
-													<span class="btn_voice font_w">VOICE</span>
-													<img class="icon_voice" alt="아이콘" src="./images/icon_voice.png"/>
-												</button>
-											</div>
-										</div>
-										<p class="char_introduction font-xs">연약한 슈퍼걸 제인을 떠받드는 소녀.<br>한때는 유명한 가수였지만, 전쟁으로 인해
-											정신없는 세계 상황으로 인해 지금은 제인의 꿈이 이루어지기만을 바라고 있다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
-				</div>
-
-			</div>
-		</article>
-	</section>
-	<!--//07. Character-->
-
-  <!--08. Features-->
-  <section id="feature" class="section fp-auto-height-responsive" data-anchor="game">
-    <article class="grid">
-      <h3 class="font_w">게임 특징</h3>
-      <div class="wrap wrap_feature">
-
-
-        <div class="cont_feature">
-          <div class="feature_slide">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img alt="PVP 콘텐츠" src="./images/introduction_1.png"/>
-                <div class="frame"></div>
-              </div>
-              <div class="swiper-slide">
-                <img alt="스토리" src="./images/introduction_2.png"/>
-                <div class="frame"></div>
-              </div>
-              <div class="swiper-slide">
-                <img alt="도감" src="./images/introduction_3.png"/>
-
-                <div class="frame"></div>
-              </div>
-              <div class="swiper-slide">
-                <img alt="성장" src="./images/introduction_4.png"/>
-                <div class="frame"></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+  <!-- 03-1. 이벤트1 -->
+  <section id="advance" class="section fp-auto-height-responsive subsection _3-page scroll_x" style="background: url(./images_ev1/image0.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="ahcv">
+    <div class="cont-ev-1">
+      <div class="frame-30">
+        <div class="sub-title-small">
+          <div class="event-1 font_gmarket_b">EVENT 1</div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="title">
+          <div class="title">사전예약 달성 이벤트</div>
+        </div>
+        <div class="sub-deco-box">
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-2-2" src="./images_ev1/deco-2-20.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-top-1" src="./images_ev1/deco-wide-top-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-2-22" src="./images_ev1/deco-2-21.png" />
+            </div>
+          </div>
+          <div class="sub-title-small2">
+            <p class="event-1">이 ‘세계’ 구원 프로젝트</p>
+          </div>
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-1-1" src="./images_ev1/deco-1-10.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-bottom-1" src="./images_ev1/deco-wide-bottom-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-1-12" src="./images_ev1/deco-1-11.png" />
+            </div>
+          </div>
+        </div>
       </div>
-    </article>
-  </section>
-  <!--//08. Features-->
-
-  <!--06. World-->
-  <section id="world" class="section fp-auto-height-responsive" data-anchor="media">
-		<article class="grid_world grid">
-
-		  <div class="wrap_world wrap">
-			<div class="world_cont">
-			  <h3 class="font_w ttl_world">세계관</h3>
-			  <div class="world_text">
-				<p class="desc_world font_w font-xs">즐겨하던 게임 최종 클리어를 위한 마지막 퀘스트를<br class="br_1024 br_520"> 통과하여 관문을 넘으려던 순간!<br>시스템 내부에서 버그가 생기며 게임과 <br class="br_520">현실 세계의 붕괴가 시작됐다.<br><br>게임 속 버그들은 다양한 형태로 <br class="br_390">현실 세계에 실체화되어 <br class="br_1024 br_520">사람들과 각종 시설을 공격하기 시작한다.<br><br> 동시에, 게임과 현실 사이의 붕괴로 인해 게임 속 <br class="br_1024 br_520">히로인들에게 '자아'가 생겼고,<br> 특별한 능력을 가지고 버그들을 상대해 나가는 <br class="br_520">이 존재들을 <br class="br_1024">'슈퍼걸스'라고 부르기로 한다. <br><br> 한편, 현실 세계에 있던 8명의 셀럽들과 GM 탁, <br class="br_520">CS 신 역시 경계가 <br class="br_1024">사라진 게임 속 <br class="br_520">세계로 빠져들고 마는데... <br><br> 게임 속 히로인들과 동등한 능력을 갖게 된 <br class="br_520">8명의 셀럽들은 <br class="br_1024">일반적인 캐릭터들과는 달리 <br class="br_pc br_520">GM 탁이 건립한 섬 <br class="br_pc"><br class="br_1024">'탁 아일랜드'에서 <br class="br_414">다양한 미션을 통해 <br class="br_1024 br_520">스스로를 성장시켜 현실과 게임 경계의 <br class="br_414">붕괴를 막기로 한다. <br>과연, 8명의 셀럽 중 역대급으로 <br class="br_520">성장할 슈퍼걸은 누가 될 것인가? <br><br> 디스토피아가 된 게임과 현실 세계를 구하고 <br class="br_1024 br_520">평화로웠던 예전으로 돌아갈 수 있을까?
-				</p>
-			  </div>
-			</div>
-		  </div>
-		</article>
-		<div class="wold_char_left"><img class="" alt="미리내" src="./images/world_char_left.png"/></div>
-		<div class="wold_char_center"><img class="" alt="미리내" src="./images/world_char_center.png"/></div>
-		<div class="wold_char_right"><img class="" alt="미리내" src="./images/world_char_right.png"/></div>
-
-    <div class="cld_wrap">
-      <div class="sky01"></div>
-      <div class="sky02"></div>
-      <div class="sky03"></div>
-      <div class="sky04"></div>
+      <div class="frame-26">
+        <div class="frame-27">
+          <div class="div2">사전예약 달성 현황</div>
+        </div>
+        <label class="frame-28">
+          <p id="proposer" class="_0-000-000 font_gmarket_b">0,000,000명</p>
+        </label>
+      </div>
+      <div class="frame-29">
+        <div class="event-1-card">
+          <img class="event-1-card-01-1" src="./images_ev1/event-1-card-01-10.png" />
+        </div>
+        <div class="event-1-card2">
+          <img class="event-1-card-02" src="./images_ev1/event-1-card-020.png" />
+        </div>
+        <div class="event-1-card2">
+          <img class="event-1-card-03" src="./images_ev1/event-1-card-030.png" />
+        </div>
+        <div class="event-1-card2">
+          <img class="event-1-card-04" src="./images_ev1/event-1-card-040.png" />
+        </div>
+        <div class="event-1-card2">
+          <img class="event-1-card-05" src="./images_ev1/event-1-card-050.png" />
+        </div>
+      </div>
+      <div class="frame-31">
+        <button class="btn-rise">
+          <img class="rise-btn-1 btn_link_copy" src="./images_ev1/rise-btn-10.png" />
+        </button>
+        <button class="btn-small btn_event_notice">
+          <p class="div4">이벤트 유의사항</p>
+        </button>
+      </div>
     </div>
-	  </section>
-	  <!--//06. World-->
+  </section>
+  <!-- // 03-1. 이벤트1 -->
 
-  
+  <!-- 03-2. 이벤트2 -->
+  <section id="inv" class="section fp-auto-height-responsive subsection _4-page scroll_x" data-anchor="invite" style="background: url(./images_ev2/_4-page.png) center; background-size: cover; background-repeat: no-repeat;">
+    <div class="content">
+      <div class="frame-39">
+        <div class="sub-title-small">
+          <div class="event-1">EVENT 2</div>
+        </div>
+        <div class="sub-title">
+          <p class="title">이 세계 소문내기 이벤트</p>
+        </div>
+        <div class="ev2-sub-deco-box">
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-2-2" src="./images_ev2/deco-2-20.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-top-1" src="./images_ev2/deco-wide-top-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-2-22" src="./images_ev2/deco-2-21.png" />
+            </div>
+          </div>
+          <div class="sub-title-small2">
+            <div class="event-1">함께하면 강해지는 이 ‘세계’ 이벤트</div>
+          </div>
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-1-1" src="./images_ev2/deco-1-10.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-bottom-1" src="./images_ev2/deco-wide-bottom-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-1-12" src="./images_ev2/deco-1-11.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-step">
+        <div class="frame-41">
+          <div class="ev2-frame-372">
+            <div
+              class="frame-362"
+              style="background: url(./images_ev2/frame-362.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="step-2">STEP 1</div>
+            </div>
+            <div class="frame-373" style="background: url(./images_ev2/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="ev2-div2">친구 초대<br>링크(URL) 생성</div>
+            </div>
+          </div>
+          <div class="event-2-card">
+            <img class="event-2-card-01" src="./images_ev2/event-2-card-010.png" />
+          </div>
+        </div>
+        <div class="point">
+          <img class="group-1" src="./images_ev2/group-10.svg" />
+        </div>
+        <div class="frame-42">
+          <div class="ev2-frame-372">
+            <div
+              class="frame-362"
+              style="background: url(./images_ev2/frame-362.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="step-2">STEP 2</div>
+            </div>
+            <div class="frame-373" style="background: url(./images_ev2/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="ev2-div2">친구 초대 링크 공유</div>
+            </div>
+          </div>
+          <div class="event-2-card">
+            <img class="event-2-card-02" src="./images_ev2/event-2-card-020.png" />
+          </div>
+        </div>
+        <div class="point">
+          <img class="group-12" src="./images_ev2/group-10.svg" />
+        </div>
+        <div class="frame-43">
+          <div class="frame-38">
+            <div class="frame-362" style="background: url(./images_ev2/frame-363.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="step-3">STEP 3</div>
+            </div>
+            <div class="frame-373" style="background: url(./images_ev2/frame-373.png) center; background-size: cover; background-repeat: no-repeat;">
+              <div class="ev2-div2">이벤트 보상<br />기다리기</div>
+            </div>
+          </div>
+          <div class="event-2-card">
+            <img class="event-2-card-03" src="./images_ev2/event-2-card-030.png" />
+          </div>
+        </div>
+      </div>
+      <div class="invitation">
+        <label class="input"></label>
+        <button class="btn-invitation-link">
+          <img class="btn-invitation-link2" src="./images_ev2/btn-invitation-link1.png" />
+        </button>
+        <button class="btn-invitation-ok">
+          <img class="btn-invitation-ok2" src="./images_ev2/btn-invitation-ok1.png" />
+        </button>
+      </div>
+      <!-- <div class="frame-44">
+        <div class="frame-53 check_flex">
+          <input id="agree_ev2" type="checkbox" name="all_age" value="check0" class="checklist">
+          <label class="check_age" for="agree_ev2"><p class="font_gmarket font_w">아래의 내용을 확인했으며, 모두 동의 합니다.</span></p></label>
+        </div>
+        <button class="btn-small-2">
+          <p class="div4">자세히보기</p>
+        </button>
+      </div> -->
+      <button class="btn-small btn_event_notice">
+        <p class="div4">이벤트 유의사항</p>
+      </button>
+    </div>
+  </section>
+  <!-- // 03-2. 이벤트2 -->
 
-<section id="footer" class="section fp-auto-height-responsive fp-auto-height" data-anchor="">
+  <!-- 04. 세계관 -->
+	<section id="intro" class="section fp-auto-height-responsive scroll_x" data-anchor="world">
+    <div class="intro_slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="img-intro" src="./imges_intro/intro_img_6.jpg" />
+        </div>
+      </div>
+    </div>
+    <img class="img-intro" src="./imges_intro/bg_intro.jpg" />
+	</section>
+	<!-- // 04. 세계관 -->
+
+  <!-- 05. 캐릭터 -->
+	<section id="character" class="section fp-auto-height-responsive scroll_x" data-anchor="char">
+    <div class="wrap_char">
+
+      <div class="title">
+        <div class="title">캐릭터</div>
+      </div>
+      <div class="cont-char">
+        <button class="card-ch card_num_1">
+          <img class="card-ch-1-2" src="./images_char/card_ch_1.png" />
+        </button>
+        <button class="card-ch2 card_num_2">
+          <img class="card-ch-2-1" src="./images_char/card_ch_2.png" />
+        </button>
+        <button class="card-ch2 card_num_3">
+          <img class="card-ch-3-1" src="./images_char/card_ch_3.png" />
+        </button>
+        <button class="card-ch2 card_num_4">
+          <img class="card-ch-4-1" src="./images_char/card_ch_4.png" />
+        </button>
+        <button class="card-ch2 card_num_5">
+          <img class="card-ch-5-1" src="./images_char/card_ch_5.png" />
+        </button>
+        <button class="card-ch2 card_num_6">
+          <img class="card-ch-6-1" src="./images_char/card_ch_6.png" />
+        </button>
+        <button class="card-ch2 card_num_7">
+          <img class="card-ch-7-1" src="./images_char/card_ch_7.png" />
+        </button>
+        <button class="card-ch2 card_num_8">
+          <img class="card-ch-8-1" src="./images_char/card_ch_8.png" />
+        </button>
+      </div>
+    </div>
+	</section>
+	<!-- // 05. 캐릭터 -->
+
+  <!-- 06. 게임특징 -->
+	<section id="game" class="section fp-auto-height-responsive scroll_x" data-anchor="gamestic">
+    <div class="game_slide">
+
+      <div class="title">
+        <div class="title">게임 특징</div>
+      </div>
+      <div class="character_slide">
+        <div class="swiper-wrapper character_list">
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-1.jpg" />
+            </div>
+          </div>
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-2.jpg" />
+            </div>
+          </div>
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-3.jpg" />
+            </div>
+          </div>
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-4.jpg" />
+            </div>
+          </div>
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-5.jpg" />
+            </div>
+          </div>
+
+          <div class="swiper-slide mirinae">
+            <div class="flex_game">
+              <img class="img-game" src="./images_game/img-game-6.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+       
+        
+      </div>
+    </div>
+    <div class="rectangle-9"></div>
+	</section>
+	<!-- // 06. 게임특징 -->
+
+  <!-- 06. 미디어 -->
+	<section id="media" class="section fp-auto-height-responsive scroll_x" data-anchor="medias">
+    <div class="media_slide">
+
+      <div class="title">
+        <div class="title">미디어</div>
+      </div>
+      <div class="media_wrap">
+        <div class="swiper mySwiper2 cont_media">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-6.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-7.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-8.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-1.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-2.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-3.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-4.jpg"/>
+            </div>
+            <div class="swiper-slide media_slide_main">
+              <img  src="./images_media/img-media-5.jpg"/>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+        </div>
+        <div class="swiper_all">
+          <div thumbsSlider="" class="swiper mySwiper pagenation">
+            <div class="swiper-wrapper media_wrapper">
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-6.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-7.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-8.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-1.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-2.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-3.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-4.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+              <div class="swiper-slide media_pagenation media_slide_main">
+                <img  src="./images_media/img-media-5.jpg"/>
+                <div class="bg_media_black"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="rectangle-9"></div>
+	</section>
+	<!-- // 06. 미디어 -->
+
+<section id="footer" class="section fp-auto-height-responsive fp-auto-height" data-anchor="copyright">
 	<div class="wrap">
 	  <div class="footer_cont">
 		<div class="footer_left_box">
@@ -1211,302 +1112,199 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="./js/tsmain.js"></script>
 <script>
+  var logo_ani = bodymovin.loadAnimation({
+      container : document.getElementById('main_logo'),
+      renderer : 'svg',
+      loop : true,
+      autoplay : true,
+      path: 'main_logo.json' 
+  });
+    
+  logo_ani.play();	
+    
+  const clickableDiv = document.getElementById('animContainer');
+  clickableDiv.addEventListener('click', () => {
+  const url = 'https://www.naver.com';
+  window.location.href = url;
+  });
+  const animationContainer = document.getElementById('animContainer');
+  let currentAnimation = null;
+  
+  function loadAnimation(animationPath, autoplay = true) {
+      if (currentAnimation) {
+          currentAnimation.stop();
+          currentAnimation.destroy(); 
+      }
+      currentAnimation = lottie.loadAnimation({
+          container: animationContainer, 
+          renderer: 'svg',
+          loop: true, 
+          autoplay: autoplay, 
+          path: animationPath 
+      });
+  }
+    
+  var lottieElement = document.getElementById('animContainer');
+  loadAnimation('ani_loading.json');
+  currentAnimation.playSegments([0, 460], true);
+  
+  setTimeout(() => {
+      currentAnimation.playSegments([130, 460], true); 
+  }, 4000);
+    
+  lottieElement.addEventListener('mouseenter', function() {
+    currentAnimation.playSegments([620, 670], true); });
+  
+  lottieElement.addEventListener('mouseleave', function() {
+      currentAnimation.playSegments([224, 462], true); });	
+</script>
+<script>
 $(document).ready(function(){
     $('#fullpage').fullpage({
+      afterLoad: function(origin, destination, direction) {
+        // 현재 body의 클래스를 확인하고 #info_k에 표시
+        var bodyClasses = $('body').attr('class');
+
+        $('#info_k').text('현재 body 클래스: ' + bodyClasses);
+          if (bodyClasses === 'fp-viewing-main') { $('#fp-nav').css('background', 'none');}
+          else{ $('#fp-nav').css('background', 'url(images/bg_nav.png) no-repeat center / cover');}
+			
+        },
         navigationPosition: "left",
         verticalCentered: false,
-        anchors: ['main', 'prereg', 'event', 'ahcv', 'invite', 'intro', 'char', 'game', 'media'],
+        anchors: ['main', 'prereg', 'ahcv', 'invite', 'world', 'char', 'gamestic', 'medias', 'copyright'],
         scrollOverflow: true,
         navigation: true,
-        navigationTooltips: [
-            '메인', 
-            '사전예약', 
-            '이벤트', 
-            '- 사전예약 달성', 
-            '- 친구초대', 
-            '게임소개', 
-            '- 세계관', 
-            '- 캐릭터', 
-            '게임 특징', 
-            '미디어'
-        ],
+        menu : '#fp-nav',
+        scrollingSpeed: 700,
+        // navigationTooltips: [
+        //     '메인', 
+        //     '사전예약',  
+        //     '사전예약 달성', 
+        //     '친구초대', 
+        //     '세계관', 
+        //     '캐릭터', 
+        //     '게임 특징', 
+        //     '미디어',
+        //     '푸터'
+        // ],
         showActiveTooltip: true,
         bigSectionsDestination: top,
-        normalScrollElements: ".popup_video_mask, .wrap_pop",
-        fixedElements: ".fixed_top, .fixed_sns, div.m_top, .popup_btn, #m_menu, #pop_bg, #pop_wrap,#fp-nav",
+        normalScrollElements: ".popup_video_mask, .wrap_pop .scroll_x",
+        fixedElements: ".fixed_top, .fixed_sns, div.m_top, .popup_btn, #m_menu, #pop_bg, #pop_wrap",
         responsiveWidth: 1025,
-        onLeave: function(origin, destination, direction, trigger){
-            if (destination.index === 1) {
-                console.log(222);
-                $('.btn_top').addClass('hidden');
-            } else {
-                $('.btn_top').removeClass('hidden');
-            }
-
-            if (destination.index === 10) {
-                $('#feature').addClass('active');
-                console.log(111);
-            }
-        },
-        afterRender: function(){
-            // 각 fp-tooltip을 p 태그로 변경
-            $('#fp-nav li .fp-tooltip').each(function(index) {
-                const tooltipText = $(this).text(); // 기존 텍스트 가져오기
-                $(this).replaceWith('<p id="tooltip-' + index + '" class="fp-tooltip">' + tooltipText + '</p>'); // p 태그로 교체
-            });
-        }
+        // onLeave: function(origin, destination, direction, trigger){
+        //     if (origin.anchor === 'main') {
+        //         $('#fp-nav').css('background', 'none');
+        //     }
+        // },
+        // afterLoad: function(origin, destination, direction){
+        //     if (destination.anchor === 'main') {
+        //         $('#fp-nav').css('background', 'none');
+        //     } else {
+        //         $('#fp-nav').css('background', 'url(../images/bg_nav.png) no-repeat center / cover');
+        //     }
+        // },
+        // afterRender: function(){
+        //     $('#fp-nav').css('background', 'none');
+        // }
     });
 
-    // $('#fp-nav li').each(function(index) {
-    //     if (index === 2) {
-    //         $(this).append('<p class="font_white tool_deco">- 사전예약 달성</p>');
-    //     }
-    // });
+    function Mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+    $( '.m_menu_g ul li:nth-child(2)' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+        return false;
+    } );
+  });  
+</script>
+<script>
+$(document).ready(function() {
+    // hover 효과를 추가하는 함수
+    function setHoverEffect() {
+        $('#desc_cs_1').addClass('hover-effect');
+        $('#desc_cs_p_1').addClass('hover-effect');
+    }
 
-    // $('#fp-nav li').each(function(index) {
-    //     if (index === 2) {
-    //         $(this).append('<p class="font_white tool_deco">- 친구초대</p>');
-    //     }
-    // });
+    // hover 효과를 제거하는 함수
+    function removeHoverEffect() {
+        $('#desc_cs_1').removeClass('hover-effect');
+        $('#desc_cs_p_1').removeClass('hover-effect');
+    }
 
-        function Mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+    $('#desc_nav_inner_1').hover(setHoverEffect, removeHoverEffect);
 
-        /*if(Mobile()){
-            alert("슈퍼걸스대전은 크롬 또는 사파리에 최적화되어 있습니다.");
-        }*/
+    // 클릭 이벤트 추가
+    $('#desc_cs_nav_1').on('click', function() {
+        window.location.href = '#ahcv'; // 링크로 이동
+    });
 
-        //.btn_top
-        $( '.m_menu_g ul li:nth-child(2)' ).click( function() {
-            $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
-            return false;
-        } );
+    // 클릭 이벤트 추가
+    $('#desc_cs_nav_2').on('click', function() {
+        window.location.href = '#invite'; // 링크로 이동
+    });
 
-        window.addEventListener("message", receiveMessage, false);
-
-        function receiveMessage(event) {
-            if (event.origin !== "https://danal.itoxi.co.kr") return;
-            //console.log(event.data);
-            const phone = event.data;
-            const phoneNum = phone.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
-
-            document.getElementById('completed1').value = phone;
-            document.getElementById('completed2').innerText = phoneNum;
-            document.getElementById('box_certif_1').style.display = 'none';
-            document.getElementById('box_certif_2').style.display = 'block';
-
-
-            // ...
+    // 페이지 로드 시 해시 체크
+    function checkHash() {
+        const hash = window.location.hash;
+        if (hash === '#ahcv' || hash === '#invite') {
+            setHoverEffect(); // 해당 해시일 경우 hover 효과 유지
+        } else {
+            removeHoverEffect(); // 다른 경우 hover 효과 제거
         }
-	/*
-        $('.btn_link').click(function() {
-            // 복사할 텍스트 가져오기
-            var textToCopy = "https://supergirlsbattle.co.kr"; // 여기에 복사하고 싶은 링크를 넣어주세요
+    }
 
-            // 텍스트를 클립보드에 복사
-            var tempInput = document.createElement("input");
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
+    // 페이지 로드 시 및 해시 변경 시 체크
+    checkHash();
+    $(window).on('hashchange', checkHash);
+});
+</script>
 
-            // 복사가 완료되면 wrap_pop_link_save를 보이도록 설정
-            $('#wrap_pop_link_save').show();
+<script>
+$(document).ready(function() {
+  // hover 효과를 추가하는 함수
+  function setHoverEffect() {
+      $('#desc_cs_2').addClass('hover-effect');
+      $('#desc_cs_p_2').addClass('hover-effect');
+  }
 
-            share('copy');
-        });
-		*/
+  // hover 효과를 제거하는 함수
+  function removeHoverEffect() {
+      $('#desc_cs_2').removeClass('hover-effect');
+      $('#desc_cs_p_2').removeClass('hover-effect');
+  }
+
+  $('#desc_nav_inner_2').hover(setHoverEffect, removeHoverEffect);
+
+  // 클릭 이벤트 추가
+  $('#desc_cs_nav_3').on('click', function() {
+      window.location.href = '#world'; // 링크로 이동
   });
 
-    // 클립보드에 복사하기
-    const copyText = (text, theme, type) => {
-      const popupResult = document.querySelector('#wrap_pop_link_save');
-      const popupLayout = popupResult.querySelector('.popup_layout');
-      const popupResultText = document.querySelector('#wrap_pop_link_save #desc_please')
+  // 클릭 이벤트 추가
+  $('#desc_cs_nav_4').on('click', function() {
+      window.location.href = '#char'; // 링크로 이동
+  });
 
-      popupResult.style.display = "block";
-      popupLayout.classList.add(theme);
+  // 클릭 이벤트 추가
+  $('#desc_cs_nav_5').on('click', function() {
+      window.location.href = '#gamestic'; // 링크로 이동
+  });
 
 
-      if (!navigator.clipboard) {
-        // Clipboard API not available
-        popupResultText.innerText = "클립보드에 접근 할 수 없습니다.";
-        return;
-      }
-
-      if (type === "url") {
-        popupLayout.querySelector('#desc_please').innerHTML = `
-        <p>주소가 복사되었습니다. \n원하는 곳에 붙여넣기(Ctrl+V) 해주세요!</p>
-        <p style="color:#d783f5; margin-top:1rem">
-            친구에게 모바일로 이벤트 참여 시 크롬 \n또는 사파리 브라우저로 참여하도록 알려주세요.
-        </p>
-        `
+  // 페이지 로드 시 해시 체크
+  function checkHash() {
+      const hash = window.location.hash;
+      if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
+          setHoverEffect(); // 해당 해시일 경우 hover 효과 유지
       } else {
-        popupLayout.querySelector('#desc_please').innerText = `주소가 복사되었습니다. \n원하는 곳에 붙여넣기(Ctrl+V) 해주세요!`
+          removeHoverEffect(); // 다른 경우 hover 효과 제거
       }
+  }
 
-      navigator.clipboard.writeText(text)
-        .then(resultText => {
-          console.log(text);
-          share('copy');
-        })
-        .catch(err => {
-          popupResultText.innerText = "복사에 실패했습니다. \n다시 시도해주세요";
-          console.log(err);
-        });
-
-    }
-
-	// 팝업 오픈
-    const openModal = (el, theme) => {
-      const element = document.querySelector(el)
-      element.style.display = "flex";
-      if (theme) {
-        element.querySelector('.popup_layout').classList.add(theme);
-      }
-    }
-
-	// 팝업 닫음
-    const closeModal = (el, theme) => {
-      const element = document.querySelector(el)
-      element.style.display = "none";
-      if (theme) {
-        element.querySelector('.popup_layout').classList.remove(theme);
-      }
-    }
-
-    function share(platform){
-        $.ajax({
-            type: "POST"
-            ,url: "{{route('share')}}"
-            ,data: {"_token": "{{ csrf_token() }}","platform": platform}
-        });
-    }
-
-    function storeButton(platform){
-        $.ajax({
-            type: "POST"
-            ,url: "{{route('storeButton')}}"
-            ,data: {"_token": "{{ csrf_token() }}","platform": platform}
-        });
-    }
-
-    function photoButton(){
-        $.ajax({
-            type: "POST"
-            ,url: "{{route('photoStore')}}"
-            ,data: {"_token": "{{ csrf_token() }}"}
-            ,success:function(data){
-                //var result = JSON.parse(data);
-                console.log(data);
-                if(data.result === "success")
-                {
-                    alert("응모가 완료되었습니다. 내일도 응모해 주세요.");
-                    $("#voting_num").html(data.photoCnt);
-                    $("#voting_num_4").html(data.photoCnt);
-                }else if(data.result === "today"){
-                    alert("이미 응모하셨습니다.");
-                }else if(data.result === "limit"){
-                    alert("이벤트가 종료되었습니다.");
-                }else if(data.result === "fail"){
-                    alert("사전 예약 참여 후 응모해 주세요.");
-                }
-            }
-            ,error:function(data){
-                alert("잘못된 접근 입니다.");
-            }
-        });
-    }
-
-    function calendarButton(){
-        $.ajax({
-            type: "POST"
-            ,url: "{{route('calendarStore')}}"
-            ,data: {"_token": "{{ csrf_token() }}"}
-            ,success:function(data){
-                //var result = JSON.parse(data);
-                console.log(data);
-                if(data.result === "success")
-                {
-                    alert("응모가 완료되었습니다. 내일도 응모해 주세요.");
-                    $("#voting_num_2").html(data.calendarCnt);
-                    $("#voting_num_5").html(data.calendarCnt);
-                }else if(data.result === "today"){
-                    alert("이미 응모하셨습니다.");
-                }else if(data.result === "limit"){
-                    alert("이벤트가 종료되었습니다.");
-                }else if(data.result === "fail"){
-                    alert("사전 예약 참여 후 응모해 주세요.");
-                }
-            }
-            ,error:function(data){
-                alert("잘못된 접근 입니다.");
-            }
-        });
-    }
-
-    function fanMeetingButton(){
-        $.ajax({
-            type: "POST"
-            ,url: "{{route('FanMeetingApply')}}"
-            ,data: {"_token": "{{ csrf_token() }}"}
-            ,success:function(data){
-                //var result = JSON.parse(data);
-                console.log(data);
-                if(data.result === "success")
-                {
-                    openModal('#wrap_pop_event_email');
-                    $("#unUsedTicket").html('-');
-                    $("#usedTicket").html('-');
-                    $("#fanmeetingBtn").html("당첨 정보 등록하기");
-                    $("#fanmeetingBtn").removeAttr("onclick");
-                    $("#fanmeetingBtn").attr("onclick","openModal('#wrap_pop_event_email')");
-                }else if(data.result === "nothing"){
-                    alert("응모권이 없습니다. 내일 다시 응모해 주세요.");
-                }else if(data.result === "isSuccess"){
-                    alert("이미 당첨되셨습니다.");
-                }else if(data.result === "fail"){
-                    alert("아쉽게도 당첨되지 않았습니다.");
-                    $("#unUsedTicket").html(data.unUsedTickets);
-                    $("#usedTicket").html(data.usedTickets);
-                }
-            }
-            ,error:function(data){
-                alert("잘못된 접근 입니다.");
-            }
-        });
-    }
-
-    function fanMeetingSelect(){
-        if($("#v_name").val() == ""){
-            alert("이름을 입력해 주세요.");
-        }else if($("#v_phone").val() == ""){
-            alert("휴대폰 번호를 입력해 주세요.");
-        }else if($("#v_email").val() == ""){
-            alert("이메일을 입력해 주세요.");
-        }else{
-            $.ajax({
-                type: "POST"
-                ,url: "{{route('FanMeetingSelect')}}"
-                ,data: {"_token": "{{ csrf_token() }}","fanName": $("#v_name").val(),"phone": $("#v_phone").val(),"email": $("#v_email").val()}
-                ,success:function(data){
-                    //var result = JSON.parse(data);
-                    console.log(data);
-                    if(data.result === "success")
-                    {
-                        alert("당첨 정보가 등록 되었습니다.");
-                        closeModal('#wrap_pop_event_email');
-                        //openModal('#wrap_pop_result');
-                    }else if(data.result === "fail"){
-                        alert("당첨 정보 등록 실패하였습니다.");
-                    }
-                }
-                ,error:function(data){
-                    alert("잘못된 접근 입니다.");
-                }
-            });
-        }
-    }
+  // 페이지 로드 시 및 해시 변경 시 체크
+  checkHash();
+  $(window).on('hashchange', checkHash);
+});
 </script>
 </body>
 </html>
