@@ -4,7 +4,8 @@
   <!-- META -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no"/>
   <!--TITLE-->
   <title>방패용사 성공담 RISE</title>
@@ -25,7 +26,7 @@
   <meta property="og:image:height" content="600" />
   <!-- OG - KakaoTalk -->
   <!-- OG - X -->
-  <meta name="twitter:title" content="현실판 미소녀 RPG! &lt;방패용사 성공담 RISE&gt;" />
+  <meta name="twitter:title" content="&lt;방패용사 성공담 RISE&gt;" />
   <meta name="twitter:image" content="https://supergirlsbattle.co.kr/images/OG_Image.jpg" />
   <meta name="twitter:description" content="다시 한 번 이 '세계'로" />
   <meta name="twitter:url" content="https://supergirlsbattle.co.kr/" />
@@ -64,6 +65,7 @@
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/popstyle.css" />
+  <link rel="stylesheet" href="css/responsive.css?ver=20231207" />
   <link rel="stylesheet" href="css/style.css?ver=20231206" />
   <link rel="stylesheet" href="css/pre-style.css" />
   <link rel="stylesheet" href="css/ev1-style.css" />
@@ -72,7 +74,6 @@
   <link rel="stylesheet" href="css/game-style.css" />
   <link rel="stylesheet" href="css/char-style.css" />
   <link rel="stylesheet" href="css/media-style.css" />
-  <link rel="stylesheet" href="css/responsive.css?ver=20231207" />
   <style>
     .ani_box{cursor:pointer; max-width: 750px; min-width: 300px; width: 100%; margin: 0 auto}
     .logo_box{ max-width: 600px; min-width: 320px; width: 100%; margin: 0 auto}
@@ -117,22 +118,33 @@
         <div class="m_nav_top">
           <button class="btn_m_close">X</button>
         </div>
+
+        <img class="" src="./images/header_logo.png" />
+
           <ul>
-            <li><a href="#a_intro" class="nav_btn current">메인</a></li>
-            <li><a href="#a_vote" class="nav_btn">슈퍼걸스배틀 소개</a></li>
-            <li><a href="#a_vevent" class="nav_btn">포토카드 이벤트</a></li>
-            <li><a href="#a_fevent" class="nav_btn">친구초대 이벤트</a></li>
-            <li><a href="#a_cevent" class="nav_btn">캘린더 이벤트</a></li>
-            <li><a href="#a_mevent" class="nav_btn">팬미팅 이벤트</a></li>
-            <li><a href="#a_world" class="nav_btn">세계관</a></li>
-            <li><a href="#a_character" class="nav_btn">캐릭터 소개</a></li>
-            <li><a href="#a_feature" class="nav_btn">게임 특징</a></li>
-            <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_ncafe">NaverCafe</a></li>
+            <li><a href="#main" class="nav_btn current font_ghana new_color">메인</a></li>
+            <li><a href="#prereg" class="nav_btn font_ghana">사전예약</a></li>
+
+            <li><a id="m_desc_cs_1" href="#ahcv" class="nav_btn font_ghana">이벤트</a></li>
+            <li><a id="m_desc_cs_nav_1" href="#ahcv" class="nav_btn font_gmarket desc_m_nav_inner">- 사전예약 달성</a></li>
+            <li><a id="m_desc_cs_nav_2" href="#invite" class="nav_btn font_gmarket desc_m_nav_inner">- 친구초대</a></li>
+
+            <li><a id="m_desc_cs_2" href="#world" class="nav_btn font_ghana">게임소개</a></li>
+            <li><a id="m_desc_cs_nav_3" href="#world" class="nav_btn font_gmarket desc_m_nav_inner">- 세계관</a></li>
+            <li><a id="m_desc_cs_nav_4" href="#char" class="nav_btn font_gmarket desc_m_nav_inner">- 캐릭터</a></li>
+            <li><a id="m_desc_cs_nav_5" href="#gamestic" class="nav_btn font_gmarket desc_m_nav_inner">- 게임특징</a></li>
+
+            <li><a href="#medias" class="nav_btn font_ghana">미디어</a></li>
+            <div class="m_pre_wrap">
+              <li class=""><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class=""><img class="img_m_pre_sns" src="./images/btn_apple_pre_kr.svg" /></a></li>
+              <li class=""><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class=""><img class="img_m_pre_sns" src="./images/btn_google_pre_kr.svg" /></a></li>
+              <li class=""><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class=""><img class="img_m_pre_sns" src="./images/reservation_btn2.png" /></a></li>
+            </div>
           </ul>
       </nav>
 </header>
 
-<nav id="fp-nav" class="_gnb" style="z-index: 999;">
+<nav id="fp-nav" class="_gnb" style="z-index: 9;">
   <ul>
       <li><a href="#main" data-menuanchor="main"><span></span></a><p class="fp-tooltip left">메인</p></li>
       <li><a href="#prereg" data-menuanchor="prereg"><span></span></a><p class="fp-tooltip left">사전예약</p> </li>
@@ -542,10 +554,17 @@
     <!-- 02. 사전예약 -->
     <section id="pre" class="section fp-auto-height-responsive subsection scroll_x" style="background: url(./images_pre/advance.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="prereg">
     <div class="rectangle-9"></div>
+    <div class="pre_img_char_box">
+      <img class="pre_img_char pre_char_1" src="./images_pre/ch1.png" />
+      <img class="pre_img_char pre_char_2" src="./images_pre/ch2.png" />
+      <img class="pre_img_char pre_char_3" src="./images_pre/ch3.png" />
+    </div>
     <div class="content">
       <div class="frame-63">
         <div class="sub-title">
-          <div class="title">&lt;방패용사 성공담 RISE&gt; 사전예약</div>
+          <div class="title none_1024">&lt;방패용사 성공담 RISE&gt; 사전예약</div>
+          <div class="title views_1024 m_pre_title_1">&lt;방패용사 성공담 RISE&gt;</div>
+          <div class="title views_1024 m_pre_title_2">사전예약</div>
         </div>
         <div class="sub-deco-box">
           <div class="frame-50">
@@ -576,8 +595,10 @@
         </div>
       </div>
       <div class="frame-62">
+
         <div class="frame-36">
-          <div
+          <img class="" src="./images_pre/event-1_compen.png" />
+          <!-- <div
             class="frame-362"
             style="background: url(./images_pre/frame-361.png) center; background-size: cover; background-repeat: no-repeat;">
             <div class="div2">사전예약 보상</div>
@@ -585,7 +606,7 @@
           <div
             class="frame-37" style=" background: url(./images_pre/frame-370.png) center; background-size: cover; background-repeat: no-repeat;">
             <img class="ssr-1-1" src="./images_pre/ssr-1-10.png" />
-          </div>
+          </div> -->
         </div>
 
         <!-- !! 사전예약 입력 폼 !! -->
@@ -607,7 +628,10 @@
           <!-- 번호 입력 Num -->
           <div class="frame-60">
             <input type="tel" id="num_phone" class="frame-59 num-pre" name="phone" value="" pattern="^[1-9]{1}[0-9]*" placeholder="'-'을 제외하고 숫자만 입력해 주세요." maxlength="" autocomplete='off'>
-            <button type="button" class="reservation-btn-3 btn_apply"><img class="btn-pre-1" src="./images_pre/btn-pre-10.png" /></button>
+            <button type="button" class="reservation-btn-3 btn_apply">
+              <img class="btn-pre-1 none_1024" src="./images_pre/btn-pre-10.png" />
+              <img class="btn-pre-1 views_1024" src="./images_pre/m_btn-pre-10.png" />
+            </button>
           </div>
           <!-- 번호 입력 Num -->
 
@@ -646,29 +670,29 @@
           style="background: url(./images_pre/frame-362.png) center; background-size: cover; background-repeat: no-repeat;">
           <div class="div2">스토어 사전예약 추가 보상</div>
         </div>
-        <div
-          class="frame-373"
-          style="background: url(./images_pre/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
-          <div class="tip">
-            <img class="event-tip-1-1" src="./images_pre/event-tip-1-10.png" />
-          </div>
-          <div class="frame-64">
-            <a href="" target="_blank" class="btn-apple-pre-kr">
-              <img class="vector" src="./images_pre/vector0.svg" />
-              <img class="vector2" src="./images_pre/vector1.svg" />
-              <img class="vector3" src="./images_pre/vector2.svg" />
-              <img class="xmlid-20" src="./images_pre/xmlid-200.svg" />
-              <img class="group" src="./images_pre/group0.svg" />
-              <img class="group2" src="./images_pre/group1.svg" />
-            </a>
-            <a href="" target="_blank" class="btn-google-pre-kr">
-              <img class="vector4" src="./images_pre/vector3.svg" />
-              <img class="vector5" src="./images_pre/vector4.svg" />
-              <img class="vector6" src="./images_pre/vector5.svg" />
-              <img class="vector7" src="./images_pre/vector6.svg" />
-              <img class="group3" src="./images_pre/group2.svg" />
-              <img class="group4" src="./images_pre/group3.svg" />
-            </a>
+        <div class="frame-373" style="background: url(./images_pre/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
+          <div class="tip_wrap">
+            <div class="tip">
+              <img class="event-tip-1-1" src="./images_pre/event-tip-1-10.png" />
+            </div>
+            <div class="frame-64">
+              <a href="" target="_blank" class="btn-apple-pre-kr">
+                <img class="vector" src="./images_pre/vector0.svg" />
+                <img class="vector2" src="./images_pre/vector1.svg" />
+                <img class="vector3" src="./images_pre/vector2.svg" />
+                <img class="xmlid-20" src="./images_pre/xmlid-200.svg" />
+                <img class="group" src="./images_pre/group0.svg" />
+                <img class="group2" src="./images_pre/group1.svg" />
+              </a>
+              <a href="" target="_blank" class="btn-google-pre-kr">
+                <img class="vector4" src="./images_pre/vector3.svg" />
+                <img class="vector5" src="./images_pre/vector4.svg" />
+                <img class="vector6" src="./images_pre/vector5.svg" />
+                <img class="vector7" src="./images_pre/vector6.svg" />
+                <img class="group3" src="./images_pre/group2.svg" />
+                <img class="group4" src="./images_pre/group3.svg" />
+              </a>
+            </div>
           </div>
           <div class="tip-2">
             <img class="event-tip-2-3" src="./images_pre/event-tip-2-30.png" />
@@ -1176,7 +1200,10 @@ $(document).ready(function(){
         scrollOverflow: true,
         navigation: true,
         menu : '#fp-nav',
+        autoScrolling: true, // 수직 스크롤 비활성화
+        scrollHorizontally: false, // 수평 스크롤 활성화
         scrollingSpeed: 700,
+        // scrollBar:true,
         // navigationTooltips: [
         //     '메인', 
         //     '사전예약',  
@@ -1188,7 +1215,7 @@ $(document).ready(function(){
         //     '미디어',
         //     '푸터'
         // ],
-        showActiveTooltip: true,
+        // showActiveTooltip: true,
         bigSectionsDestination: top,
         normalScrollElements: ".popup_video_mask, .wrap_pop .scroll_x",
         fixedElements: ".fixed_top, .fixed_sns, div.m_top, .popup_btn, #m_menu, #pop_bg, #pop_wrap",
@@ -1305,6 +1332,53 @@ $(document).ready(function() {
   checkHash();
   $(window).on('hashchange', checkHash);
 });
+
+$(document).ready(function() {
+    // 현재 해시를 확인하고 해당 a 태그에 new_color 클래스 추가
+    function updateNavColor() {
+        const hash = window.location.hash || '#main'; // 기본값 설정
+        $('.nav_btn').removeClass('new_color'); // 모든 a 태그에서 new_color 클래스 제거
+
+        // 특정 조건에 따른 클래스 추가
+        if (hash === '#ahcv' || hash === '#invite') {
+            $('#m_desc_cs_1').addClass('new_color'); // m_desc_cs_1에 new_color 추가
+        } else if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
+            $('#m_desc_cs_2').addClass('new_color'); // m_desc_cs_2에 new_color 추가
+        } else if (hash === '#main') {
+            $('a[href="#main"]').addClass('new_color'); // #main에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#prereg') {
+            $('a[href="#prereg"]').addClass('new_color'); // #prereg에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#medias') {
+            $('a[href="#medias"]').addClass('new_color'); // #medias에 해당하는 a 태그에 new_color 추가
+        }
+    }
+
+    // 페이지 로드 시 및 해시 변경 시 updateNavColor 함수 호출
+    updateNavColor();
+    $(window).on('hashchange', updateNavColor);
+
+    // a 태그 클릭 시 페이지 이동 및 클래스 추가
+    $('.nav_btn').on('click', function() {
+        const targetHash = $(this).attr('href');
+        
+        // 특정 클릭 이벤트에 따라 new_color 클래스 추가
+        if (this.id === 'm_desc_cs_nav_1' || this.id === 'm_desc_cs_nav_2') {
+            $('#m_desc_cs_1').addClass('new_color');
+            $('#m_desc_cs_2').removeClass('new_color'); // m_desc_cs_2에서 new_color 제거
+        } else if (this.id === 'm_desc_cs_nav_3' || this.id === 'm_desc_cs_nav_4' || this.id === 'm_desc_cs_nav_5') {
+            $('#m_desc_cs_2').addClass('new_color');
+            $('#m_desc_cs_1').removeClass('new_color'); // m_desc_cs_1에서 new_color 제거
+        } else {
+            $('#m_desc_cs_1').removeClass('new_color'); // 기본적으로 m_desc_cs_1에서 new_color 제거
+            $('#m_desc_cs_2').removeClass('new_color'); // 기본적으로 m_desc_cs_2에서 new_color 제거
+        }
+        
+        // 해시를 업데이트하여 페이지 이동
+        window.location.hash = targetHash;
+    });
+});
+
+
 </script>
 </body>
 </html>

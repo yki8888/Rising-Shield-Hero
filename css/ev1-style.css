@@ -29,8 +29,9 @@
   width: 1060px;
   position: absolute;
   left: 50%;
-  translate: -50%;
-  top: calc(50% - 437px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+    
 }
 .frame-30 {
   padding: 0px 0px 20px 0px;
@@ -371,4 +372,14 @@
   top: 0px;
   object-fit: cover;
   aspect-ratio: 514/125;
+}
+
+@media screen and (max-width: 1024px){
+  .cont-ev-1{
+    transform: unset;
+    left: unset;
+    top: unset;
+    width: 100%;
+    padding: 0;
+  }
 }

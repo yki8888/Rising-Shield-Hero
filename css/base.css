@@ -30,7 +30,9 @@
 
 .fa-arrow-down, .fa-external-link-alt{ font-weight: 600; transition: all 0.01s; }
 
-html { scroll-behavior: smooth; font-size: 20px;}
+html {
+  /* scroll-behavior: smooth;  */
+  font-size: 20px;}
 
 /* RESET */
 *{box-sizing: border-box;user-select: none;word-break: keep-all;}
@@ -130,6 +132,10 @@ p{font-weight: 500;}
   font-family: GmarketSansBold;
 }
 
+.font_ghana{
+  font-family: ghanachoco;
+}
+
 img { border:0; }
 button{ background: transparent;border: none; cursor: pointer;}
 
@@ -143,6 +149,8 @@ button{ background: transparent;border: none; cursor: pointer;}
 .mobile840 { display: none;}
 .br_pc {display: block;}
 .br_1024, .br_840, .br_720, .br_520, .br_480, .br_430, .br_414, .br_390, .br_375 { display: none;}
+.none_1024{display: block;}
+
 
 :root{
   --color_pp_1: #701b94; 
@@ -214,12 +222,12 @@ button{ background: transparent;border: none; cursor: pointer;}
 
 @media screen and (max-width: 1024px){
   .pc, .mobile_world,
-  .container .pc{
+  .container .pc, .none_1024{
     display: none;
   }
 
   .mobile,
-  .container .mobile{
+  .container .mobile, .views_1024{
     display: block;
   }
 

@@ -236,7 +236,7 @@ const classSlide = new Swiper(".character_slide", {
 var swiper = new Swiper(".mySwiper", {
 	loop: true,
 	spaceBetween: 10,
-	slidesPerView: 8,
+	slidesPerView: 6,
   initialSlide: 3,
 	freeMode: true,
 	watchSlidesProgress: true,
@@ -1439,3 +1439,4 @@ document.querySelectorAll('.card_num_1, .card_num_2, .card_num_3, .card_num_4, .
     document.querySelector('.desc_char_pop').innerHTML = charDesc;
   });
 });
+

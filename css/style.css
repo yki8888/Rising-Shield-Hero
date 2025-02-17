@@ -434,7 +434,7 @@ Obtainable Item List
     top: 0;
     width: 100%;
     height: 100vh;
-    background: url('../images/bg_main.jpg') no-repeat 0 / cover;
+    background: url('../images/bg_main.jpg') no-repeat 100% / cover;
 }
 
 .main_box{
@@ -1450,15 +1450,6 @@ input[id="promotion"]:checked + label{
 
 .one_btn{
     background: url('../images/btn_onestore.png') no-repeat center / contain;
-}
-
-.btn_apply{
-    position: relative;
-    width: 100%;
-    max-width: 523px;
-    height: 86px;
-    background: url('../images/btn_apply_default_2.png') no-repeat center / contain;
-    color: #fff;
 }
 
 .perks_phrases{
