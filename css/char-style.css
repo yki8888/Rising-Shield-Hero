@@ -1,0 +1,375 @@
+#character{
+  background: url('../images_char/bg_char.jpg') no-repeat center / cover;
+}
+
+.wrap_char{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+
+.cont-char,
+.cont-char * {
+  box-sizing: border-box;
+}
+.cont-char {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  max-width: 1060px;
+  position: relative;
+}
+.card-ch {
+  flex-shrink: 0;
+  width: 334px;
+  height: 323px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 334/323;
+}
+.card-ch-1-2 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: -0.3%;
+  left: 0.9%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch2 {
+  margin: 0 0 0 -92px;
+  flex-shrink: 0;
+  width: 334px;
+  height: 323px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 334/323;
+}
+.card-ch-2-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-3-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-4-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-5-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-6-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-7-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+.card-ch-8-1 {
+  width: 99.4%;
+  height: 99.07%;
+  position: absolute;
+  right: 0.3%;
+  left: 0.3%;
+  bottom: 0.62%;
+  top: 0.31%;
+  object-fit: cover;
+}
+
+.ch-pop {
+  background: linear-gradient(to left, #ffffff, #ffffff);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 597px;
+  position: relative;
+  z-index: 999;
+}
+.ch-deco-top {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.ch-deco-top-left {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.tr-01 {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.ch-deco-topcenter {
+  flex: 1;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.ch-deco-top-right {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.tr-02 {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.ch-deco-middle {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.ch-deco-middle-left {
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 52px;
+  position: relative;
+  object-fit: cover;
+}
+.ch-deco-middle-center {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  height: 495px;
+  position: relative;
+  width: fit-content;
+  align-items: flex-end;
+  justify-content: end;
+  z-index: 999;
+}
+.ch-deco-middile-right {
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 52px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.ch-deco-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.ch-deco-bottom-left {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.tr-03 {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.ch-deco-bottom-center {
+  flex: 1;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: 50;
+}
+.ch-deco-bottom-right {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.tr-04 {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.cont_char_pop{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.btn-pop-char-close{
+  z-index: 999;
+}
+
+.char_pop{
+  position: absolute;
+  width: 1300px;
+  height: 903px;
+  overflow: visible;
+  bottom: 0;
+  right: 80px;
+  z-index: 10;
+}
+
+.name_char_pop{
+  font-size: 55px;
+  color: #523A20;
+}
+
+.ch-history,
+.ch-history * {
+  box-sizing: border-box;
+}
+.ch-history {
+  border-style: solid;
+  border-color: var(--650, #523a20);
+  border-width: 1px;
+  padding: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.textarea_pop_char {
+  flex-shrink: 0;
+  width: 484px;
+  height: 246px;
+  position: relative;
+  overflow: hidden;
+}
+._0 {
+  color: var(--650, #523a20);
+  text-align: left;
+  font-family: "GmarketSansTtf-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.07em;
+  font-weight: 500;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 464px;
+  height: 673px;
+}
+
+.textarea_pop_char {
+  max-height: 300px; /* 원하는 높이로 설정 */
+  overflow-y: auto; /* 세로 스크롤바 활성화 */
+}
+
+/* 전체 스크롤바 */
+.textarea_pop_char::-webkit-scrollbar {
+  width: 10px; /* 스크롤바 너비 */
+  margin-left: 10px;
+}
+
+/* 스크롤바 배경 */
+.textarea_pop_char::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 스크롤바 배경색 */
+}
+
+/* 스크롤바 핸들 */
+.textarea_pop_char::-webkit-scrollbar-thumb {
+  background: #000; /* 핸들 색상 */
+  border-radius: 6px; /* 핸들 둥글기 */
+}
+
+/* 핸들에 마우스를 올렸을 때 색상 */
+.textarea_pop_char::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 핸들 호버 색상 */
+}
