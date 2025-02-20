@@ -111,17 +111,42 @@
 }
 
 @media screen and (max-width: 1024px){
+  .wrap_char, #game .game_slide, #media .title, .mySwiper2{
+    transform: unset;
+  }
+
+  .logo_box, .ani_box{
+    width: 100% !important;
+  }
+
+  .btn_play{
+    width: 200px !important;
+    height: 100% !important;
+  }
+  
+
+  .cont-ev-1, #inv .content{
+    transform: unset;
+    position: unset;
+  }
+
+  .container{
+    overflow: hidden;
+  }
   .title{
-    font-size: 8vw;
+    font-size: 84px;
   }
 
   #main-page{
     background-position: 50%;
     height: 100vh !important;
+    min-height: 1070px;
   }
 
   .main_box{
-    justify-content: space-evenly;
+    justify-content: space-around !important;
+    gap: 50px;
+    max-height: 1080px !important;
   }
 
   #advance, #inv, #intro{
@@ -130,7 +155,7 @@
 
   #pre{
     background: url(../images_pre/m_advance.png) center center / cover no-repeat !important;
-    height: 1800px !important;
+    height: 2490px !important;
   }
 
 	.section,
@@ -159,7 +184,7 @@
 
   #pre .content{
     width: 100%;
-    bottom: 5%;
+    bottom: 10%;
     transform: unset;
     top: unset;
     left: unset;
@@ -263,10 +288,6 @@
     padding-bottom: 2rem;
   }
 
-  #advance p{
-    font-size: 1.4rem;
-	left: unset;
-  }
 
   #advance .decs_cerif{
 	font-size: 1rem;
@@ -703,10 +724,8 @@
   }
 
   /* 07. Character */
-  #character{
-    height: 1500px !important;
-    background: url(../images/m/m_bg_characteristic.jpg) no-repeat center / cover;
-  }
+
+
 
   #character h3{
     padding: 3.5rem 0 3rem;
@@ -840,6 +859,13 @@
     background-color: #fff;
   }
 }
+
+@media screen and (max-width: 1366px){
+  #main-page{
+    background-position: 40% !important;
+  }
+}
+
 
 @media screen and (max-width: 840px){
   .ttl_vote{
@@ -1510,6 +1536,10 @@
 /* Mobile - MAX*/
 /* Mobile - MAX - ���θ��*/
 @media screen and (max-width : 915px) and (orientation: landscape) {
+  #main-page{
+    height: 1500px !important;
+  }
+
   #pop_wrap{
     top: 10%;
   }

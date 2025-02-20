@@ -373,3 +373,69 @@
 .textarea_pop_char::-webkit-scrollbar-thumb:hover {
   background: #555; /* 핸들 호버 색상 */
 }
+
+@media screen and (max-width: 1024px){
+  #character {
+    height: 1900px !important;
+  }
+
+  #character .wrap_char{
+    max-width: unset;
+    width: 100%;
+    gap: 100px;
+  }
+
+  #character .cont-char{
+    padding: 0 80px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .wrap_pop{
+    position: fixed;
+  }
+
+  .ch-pop{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .char_pop{
+    left: 60%;
+    top: -36%;
+    right: unset;
+    transform: translate(-50%, 0);
+  }
+
+  .ch-deco-middle{
+    height: 810px;
+    align-items: flex-end;
+  }
+
+  .ch-history{
+    width: 100%;
+    padding: 8px;
+  }
+
+  .cont_char_pop{
+    /* align-items: center; */
+
+    width: 88%;
+  }
+
+  .name_char_pop{
+    font-size: 70px;
+    filter: drop-shadow(1px 0px 4px rgba(255, 255, 255, 0.6));
+  }
+
+  .textarea_pop_char{
+    width: 100%;
+  }
+
+  ._0{
+    font-size: 30px;
+    line-height: 37px;
+
+  }
+}

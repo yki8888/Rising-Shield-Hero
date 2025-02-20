@@ -44,5 +44,21 @@
 }
 
 .img-game{
-  
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  #game{
+    background: url(../images_game/m_bg_game.jpg) no-repeat center / cover !important;
+    height: 1900px !important;
+  }
+
+  #game .game_slide{
+    gap: 200px;
+  }
+
+  .character_slide{
+    max-width: 800px;
+  }
+
 }

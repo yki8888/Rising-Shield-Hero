@@ -58,3 +58,18 @@
 .media_slide_main img{
   border: 5px solid #fff;
 }
+
+@media screen and (max-width: 1024px){
+  #media{
+    background: url(../images_media/m_bg_media.jpg) no-repeat center / cover;
+    height: 1900px !important;
+  }
+
+  .media_slide{
+    gap: 200px;
+  }
+
+  .swiper_all{
+    width: 160%;
+  }
+}

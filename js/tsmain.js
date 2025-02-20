@@ -235,7 +235,7 @@ const classSlide = new Swiper(".character_slide", {
 
 var swiper = new Swiper(".mySwiper", {
 	loop: true,
-	spaceBetween: 10,
+	spaceBetween: 8,
 	slidesPerView: 6,
   initialSlide: 3,
 	freeMode: true,
@@ -861,19 +861,22 @@ document.querySelectorAll('.btn_overhide').forEach(function(btn){
 HEADER - mobile
 ****************/
 // Click Mobile Navigation
-const openMobileNav = document.querySelector('.btn_nav_open');
-const closeMobileNav = document.querySelector('.btn_nav_close');
-const mobileNav = document.querySelector('.m_nav');
-const myPageButton = document.querySelector('.btn_login_m'); // 마이페이지 버튼 선택
-let isMyPageButtonActive = false; // 마이페이지 버튼의 활성화 상태 추적
+// const openMobileNav = document.querySelector('.btn_nav_open');
+// const closeMobileNav = document.querySelector('.btn_nav_close');
+// const mobileNav = document.querySelector('.m_nav');
+// const myPageButton = document.querySelector('.btn_login_m'); // 마이페이지 버튼 선택
+// let isMyPageButtonActive = false; // 마이페이지 버튼의 활성화 상태 추적
 
-openMobileNav.addEventListener('click', function(){
-  mobileNav.classList.add('active');
-});
+// openMobileNav.addEventListener('click', function() {
+//   mobileNav.classList.add('active');
+//   document.body.style.overflow = 'hidden'; // body에 overflow hidden 추가
+// });
 
-closeMobileNav.addEventListener('click', function(){
-  mobileNav.classList.remove('active');
-});
+// closeMobileNav.addEventListener('click', function() {
+//   mobileNav.classList.remove('active');
+//   document.body.style.overflow = 'visible'; // body의 overflow를 원래 상태로 되돌리기
+// });
+
 
 // 마이페이지 버튼 클릭 시
 /*
@@ -957,63 +960,6 @@ classSlide.on('slideChange', function () {
 	plag = 0;
 	iconAnimation("stop");
 	stopAudio();
-});
-
-// 우편번호 찾기 레이어 숨김 함수를 전역 스코프에 정의
-function closeDaumPostcode() {
-    document.getElementById('postcode-layer').style.display = 'none';
-	document.getElementById('postcode-wrap').style.display = 'none';
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // 체크박스와 관련된 로직 - 주소 입력 팝업
-    var checkbox = document.getElementById('v_ch');
-    var submitButton = document.querySelector('#wrap_pop_event_address .btn_pop_ok_ch');
-
-    checkbox.addEventListener('change', function() {
-        submitButton.disabled = !this.checked;
-    });
-
-    // 체크박스와 관련된 로직 - 이메일 입력 팝업
-	var checkbox2 = document.getElementById('v_ch2');
-    var submitButton2 = document.querySelector('#wrap_pop_event_email .btn_pop_ok_ch');
-
-    checkbox2.addEventListener('change', function() {
-        submitButton2.disabled = !this.checked;
-    });
-
-    // 우편번호 검색 버튼 관련 로직
-    document.querySelector('.btn_add').addEventListener('click', function() {
-        document.getElementById('postcode-layer').style.display = 'block';
-		document.getElementById('postcode-wrap').style.display = 'flex';
-
-        new daum.Postcode({
-            oncomplete: function(data) {
-                document.getElementById('address').value = data.zonecode;
-                document.getElementById('address_2').value = data.roadAddress;
-                document.getElementById('address_3').focus();
-                closeDaumPostcode();
-            },
-            onclose: function(state) {
-                closeDaumPostcode();
-            },
-            width: '100%',
-            height: '100%',
-            maxSuggestItems: 5
-        }).embed(document.getElementById('postcode-layer'));
-    });
-
-    // '닫기' 버튼에 대한 이벤트 리스너 추가
-    var btnCloseLayer = document.getElementById('btnCloseLayer');
-    if (btnCloseLayer) {
-        btnCloseLayer.addEventListener('click', closeDaumPostcode);
-    }
-
-    // 휴대폰 번호 필드에서 숫자만 입력되도록 하는 로직
-    var phoneInput = document.getElementById('v_phone');
-    phoneInput.addEventListener('input', function(e) {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    });
 });
 
 //사전예약 올 체크 박스
@@ -1432,7 +1378,17 @@ document.querySelectorAll('.card_num_1, .card_num_2, .card_num_3, .card_num_4, .
 
     // pop_char 요소 표시
     document.getElementById('pop_char').style.display = 'flex';
-
+	  
+	  //팝업 시 스크롤방지
+	  $('body').on('scroll touchmove mousewheel', function(event) {
+		  event.preventDefault();
+		  event.stopPropagation();
+		  return false;
+	  });
+	  // 팝업 닫기 시 스크롤 해제
+	  $('.btn-pop-char-close').click(function(){
+		  $('body').off('scroll touchmove mousewheel');
+	  });
     // 정보 업데이트
     document.querySelector('.char_pop').src = charImageSrc;
     document.querySelector('.name_char_pop').textContent = charName;

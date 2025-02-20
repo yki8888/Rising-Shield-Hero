@@ -38,7 +38,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 39px;
   position: relative;
   overflow: hidden;
 }
@@ -152,7 +151,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 39px;
   position: relative;
   overflow: hidden;
 }
@@ -543,4 +541,74 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+}
+
+.ev2_img_char_box{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 효과 */  
+}
+
+.ev2_img_char{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.ev2_box_visivle{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 1024px){
+  #inv{
+    background: url(../images_ev2/bg_ev2.jpg) center center / cover no-repeat !important;
+    height: 2325px !important;
+  }
+
+  #inv .content{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
+  }
+
+  .ev2-sub-deco-box{
+    margin: 0 auto;
+  }
+
+  .invitation{
+    width: 900px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .invitation .input{
+    width: 100%;
+    height: 160px;
+    flex: unset;
+  }
+
+  .btn-invitation-link ,.btn-invitation-ok{
+    width: 445px;
+    height: 102px;
+  }
+
+  .btn-invitation-link2, .btn-invitation-ok2{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ev2_flex_btn{
+    display: flex;
+    gap: 16px;
+  }
 }

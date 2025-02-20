@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="format-detection" content="telephone=no"/>
   <!--TITLE-->
   <title>방패용사 성공담 RISE</title>
@@ -85,17 +85,17 @@
 <body>
 <!--HEADER-->
 <header class="gnb">
-  <h1><a class="logo" href="/">방패용사 성공담 RISE</a></h1>
+  <h1><a class="logo" href="#main">방패용사 성공담 RISE</a></h1>
   <button type="button" class="btn_nav_open mobile">Open Menu</button>
 
   <div class="gnb_right">
     <nav class="sns">
       <ul>
-        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_apple">App Store에서 사전 주문하기</a></li>
-        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_google">Google Play 사전 등록하기</a></li>
-        <li class="none_1480"><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_pre_go">사전예약하기</a></li>
-        <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_ncafe">NaverCafe</a></li>
-        <li><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class="btn_youtube">Youtube</a></li>
+        <li class="none_1480"><a href="https://play.google.com/store/apps/details?id=com.itoxi.aos.shieldofhero" target="_blank" class="btn_pre_google">Google Play 사전 등록하기</a></li>
+        <li class="none_1480"><a href="https://onesto.re/0000780838" target="_blank" class="btn_pre_apple">App Store에서 사전 주문하기</a></li>
+        <li class="none_1480"><a href="#prereg" target="_blank" class="btn_pre_go">사전예약하기</a></li>
+        <li><a href="https://game.naver.com/lounge/shieldhero/home" target="_blank" class="btn_ncafe">NaverCafe</a></li>
+        <li><a href="https://www.youtube.com/@shieldhero_official" target="_blank" class="btn_youtube">Youtube</a></li>
         <li>
           <div class="wrap_share">
               <div class="cont_share_1">
@@ -119,10 +119,10 @@
           <button class="btn_m_close">X</button>
         </div>
 
-        <img class="" src="./images/header_logo.png" />
-
-          <ul>
-            <li><a href="#main" class="nav_btn current font_ghana new_color">메인</a></li>
+        <div class="menu_on_wrap">
+          <img class="menu_on_img" src="./images/header_logo.png" />
+          <ul style="margin-top: 60px;">
+            <li><a href="#main" class="nav_btn current font_ghana">메인</a></li>
             <li><a href="#prereg" class="nav_btn font_ghana">사전예약</a></li>
 
             <li><a id="m_desc_cs_1" href="#ahcv" class="nav_btn font_ghana">이벤트</a></li>
@@ -141,30 +141,42 @@
               <li class=""><a href="https://cafe.naver.com/supergirlsbattle" target="_blank" class=""><img class="img_m_pre_sns" src="./images/reservation_btn2.png" /></a></li>
             </div>
           </ul>
+        </div>
       </nav>
 </header>
 
-<nav id="fp-nav" class="_gnb" style="z-index: 999;">
+<nav id="fp-nav" class="_gnb" style="z-index: 500;">
   <ul>
-      <li><a href="#main" data-menuanchor="main"><span></span></a><p class="fp-tooltip left">메인</p></li>
-      <li><a href="#prereg" data-menuanchor="prereg"><span></span></a><p class="fp-tooltip left">사전예약</p> </li>
-      <li><a id="desc_cs_1" href="#ahcv" data-menuanchor="ahcv"><span></span></a><p id="desc_cs_p_1" class="fp-tooltip left">이벤트</p> </li>
-      <div id="desc_nav_inner_1" class="desc_nav_inner">
+      <li><a id="desc_cs_main" href="#main" data-menuanchor="main"><span></span></a><p id="desc_cs_p_main" class="fp-tooltip left">메인</p></li>
+      <li><a id="desc_cs_pre" href="#prereg" data-menuanchor="prereg"><span></span></a><p id="desc_cs_p_pre" class="fp-tooltip left">사전예약</p> </li>
+      <li><a id="desc_cs_1" href="#ahcv" data-menuanchor="ahcv"><span></span></a><p id="desc_cs_p_1" class="fp-tooltip left desc_ac_1">이벤트</p> </li>
+      <!-- <div id="desc_nav_inner_1" class="desc_nav_inner">
         <p id="desc_cs_nav_1" href="#ahcv" class="font_gmarket">- 사전예약 달성</p>
         <p id="desc_cs_nav_2" href="invite" class="font_gmarket">- 친구초대</p>
-      </div>
-      <li id="nav_none_1"><a href="#ahcv" data-menuanchor="ahcv"><span></span></a><p class="fp-tooltip left">사전예약 달성</p></li>
+      </div> -->
+      <!-- <li id="nav_none_1"><a href="#ahcv" data-menuanchor="ahcv"><span></span></a><p class="fp-tooltip left">사전예약 달성</p></li> -->
       <li id="nav_none_2"><a href="#invite" data-menuanchor="invite"><span></span></a><p class="fp-tooltip left">친구초대</p></li>
       <li><a id="desc_cs_2" href="#world" data-menuanchor="world"><span></span></a><p id="desc_cs_p_2" class="fp-tooltip left">게임소개</p></li>
-      <div id="desc_nav_inner_2" class="desc_nav_inner">
+      <!-- <div id="desc_nav_inner_2" class="desc_nav_inner">
         <p id="desc_cs_nav_3" href="#world" class="font_gmarket">- 세계관</p>
         <p id="desc_cs_nav_4" href="#char" class="font_gmarket">- 캐릭터</p>
         <p id="desc_cs_nav_5" href="#gamestic" class="font_gmarket">- 게임 특징</p>
-      </div>
+      </div> -->
       <li id="nav_none_3"><a href="#char" data-menuanchor="char"><span></span></a><p class="fp-tooltip left">캐릭터</p></li>
       <li id="nav_none_4"><a href="#gamestic" data-menuanchor="gamestic"><span></span></a><p class="fp-tooltip left">게임특징</p></li>
-      <li><a href="#medias" data-menuanchor="medias"><span></span></a><p class="fp-tooltip left">미디어</p></li>
+      <li><a id="desc_cs_medias" href="#medias" data-menuanchor="medias"><span></span></a><p id="desc_cs_p_media" class="fp-tooltip left">미디어</p></li>
+      
+      <!-- <li><a href="#copyright" data-menuanchor="copyright"><span></span></a><p class="fp-tooltip left">푸터</p></li> -->
   </ul>
+  <div id="desc_nav_inner_1" class="desc_nav_inner">
+    <p id="desc_cs_nav_1" href="#ahcv" class="font_gmarket">- 사전예약 달성</p>
+    <p id="desc_cs_nav_2" href="invite" class="font_gmarket">- 친구초대</p>
+  </div>
+  <div id="desc_nav_inner_2" class="desc_nav_inner">
+    <p id="desc_cs_nav_3" href="#world" class="font_gmarket">- 세계관</p>
+    <p id="desc_cs_nav_4" href="#char" class="font_gmarket">- 캐릭터</p>
+    <p id="desc_cs_nav_5" href="#gamestic" class="font_gmarket">- 게임 특징</p>
+  </div>
 </nav>
 
 <!--POP-UP : Youtube-->
@@ -181,20 +193,21 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
   <div class="pop-deco-top">
     <div class="pop-deco-top-left">
-      <img class="tr-01" src="./images/tr-010.png" />
+      <!--<img class="tr-01" src="images/tr-010.png" />-->
     </div>
-    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+    <!--<img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
+	  <div class="pop_top_center"></div>
     <div class="pop-deco-top-right">
-      <img class="tr-02" src="./images/tr-020.png" />
+      <!--<img class="tr-02" src="./images/tr-020.png" />-->
     </div>
   </div>
   <div class="pop-wrap">
-    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+   <!--<img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
     <div class="pop-cont">
       <h4 class="pop_title font_gmarket_b">이벤트 유의사항</h4>
       <div class="pop-bar"></div>
       <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; max-width: 590px;">
-        <h4 class="pop-desc pop_ev_desc">· 본 이벤트는 만 00세 미만은 참여할 수 없습니다.</h4>
+        <h4 class="pop-desc pop_ev_desc">· 본 이벤트는 만 15세 미만은 참여할 수 없습니다.</h4>
         <h4 class="pop-desc pop_ev_desc" style="text-indent: -20px; margin-left: 20px; line-height: 24px;">· &lt;방패용사 성공담 RISE&gt; 사전예약 이벤트 보상은 오픈 이후 공식 라운지를 통해 <br>안내 드릴 예정입니다.</h4>
         <h4 class="pop-desc pop_ev_desc">· 자세한 이벤트 공통 정책은 공식 라운지 ‘이벤트 공통 정책’에서 확인할 수 있습니다.</h4>
         <h4 class="pop-desc pop_ev_desc">· 허위 및 잘못된 정보를 입력하는 경우 사전예약 및 이벤트 참여가 불가능합니다.</h4>
@@ -203,15 +216,16 @@
         <p class="pop-ok-desc">확인</p>
       </button>
     </div>
-    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+    <!--<img class="pop-deco-right" src="./images/pop-deco-right0.png" />-->
   </div>
   <div class="pop-deco-bottom">
     <div class="pop-deco-bottom-left">
-      <img class="tr-03" src="./images/tr-030.png" />
+      <!-- <img class="tr-03" src="./images/tr-030.png" /> -->
     </div>
-    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <!-- <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" /> -->
+	  <div class="pop_bottom_center"></div>
     <div class="pop-deco-bottom-right">
-      <img class="tr-04" src="./images/tr-040.png" />
+      <!-- <img class="tr-04" src="./images/tr-040.png" /> -->
     </div>
   </div>
 </div>
@@ -224,15 +238,16 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
   <div class="pop-deco-top">
     <div class="pop-deco-top-left">
-      <img class="tr-01" src="./images/tr-010.png" />
+      <!--<img class="tr-01" src="./images/tr-010.png" />-->
     </div>
-    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+	  <div class="pop_top_center"></div>
+    <!--<img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
     <div class="pop-deco-top-right">
-      <img class="tr-02" src="./images/tr-020.png" />
+      <!--<img class="tr-02" src="./images/tr-020.png" />-->
     </div>
   </div>
   <div class="pop-wrap">
-    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+    <!--<img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
     <div class="pop-cont">
       <h4 class="pop_title font_gmarket_b">방패용사 성공담 RISE</h4>
       <h5 class="pop-desc-s font_gmarket_b">사전예약에 참여해주셔서 감사합니다.</h5>
@@ -242,15 +257,16 @@
         <p class="pop-ok-desc">확인</p>
       </button>
     </div>
-    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+   <!-- <img class="pop-deco-right" src="./images/pop-deco-right0.png" />-->
   </div>
   <div class="pop-deco-bottom">
     <div class="pop-deco-bottom-left">
-      <img class="tr-03" src="./images/tr-030.png" />
+      <!--<img class="tr-03" src="./images/tr-030.png" />-->
     </div>
-    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <!--<img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />-->
+	  <div class="pop_bottom_center"></div>
     <div class="pop-deco-bottom-right">
-      <img class="tr-04" src="./images/tr-040.png" />
+      <!--<img class="tr-04" src="./images/tr-040.png" />-->
     </div>
   </div>
 </div>
@@ -263,19 +279,20 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
   <div class="pop-deco-top">
     <div class="pop-deco-top-left">
-      <img class="tr-01" src="./images/tr-010.png" />
+      <!--<img class="tr-01" src="./images/tr-010.png" />-->
     </div>
-    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+    <!--<img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
+	  <div class="pop_top_center" ></div>
     <div class="pop-deco-top-right">
-      <img class="tr-02" src="./images/tr-020.png" />
+      <!--<img class="tr-02" src="./images/tr-020.png" />-->
     </div>
   </div>
   <div class="pop-wrap">
-    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+    <!--<img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
     <div class="pop-cont">
       <h4 class="pop-ttl pop_title pop_title font_gmarket_b">-</h4>
       <div class="pop-bar"></div>
-      <h4 class="pop-desc">(주)스타코링크와 (주)아이톡시는 다음과 같이 개인정보를 수집 및 이용하고 있습니다.</h4>
+      <h4 class="pop-desc">(주)아이톡시와 (주)스타코링크는 다음과 같이 개인정보를 수집 및 이용하고 있습니다.</h4>
       <div class="pop-table">
         <div class="cont-desc">
           <div class="box-desc">
@@ -345,15 +362,16 @@
         <p class="pop-ok-desc">확인</p>
       </button>
     </div>
-    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+    <!-- <img class="pop-deco-right" src="./images/pop-deco-right0.png" /> -->
   </div>
   <div class="pop-deco-bottom">
     <div class="pop-deco-bottom-left">
-      <img class="tr-03" src="./images/tr-030.png" />
+      <!--<img class="tr-03" src="./images/tr-030.png" />-->
     </div>
-    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+	  <div class="pop_bottom_center"></div>
+    <!-- <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" /> -->
     <div class="pop-deco-bottom-right">
-      <img class="tr-04" src="./images/tr-040.png" />
+     <!-- <img class="tr-04" src="./images/tr-040.png" />-->
     </div>
   </div>
 </div>
@@ -366,15 +384,16 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
     <div class="pop-deco-top">
       <div class="pop-deco-top-left">
-        <img class="tr-01" src="./images/tr-010.png" />
+       <!-- <img class="tr-01" src="./images/tr-010.png" />-->
       </div>
-      <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+      <!--<img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
+		<div class="pop_top_center"></div>
       <div class="pop-deco-top-right">
-        <img class="tr-02" src="./images/tr-020.png" />
+        <!--<img class="tr-02" src="./images/tr-020.png" />-->
       </div>
     </div>
     <div class="pop-wrap pop-wrap-desc">
-      <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+      <!--<img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
       <div class="pop-cont pop-common-cont">
         <h4 class="pop_title pop-ttl-desc font_gmarket_b desc_pop_common">-</h4>
         
@@ -382,15 +401,16 @@
           <p class="pop-ok-desc">확인</p>
         </button>
       </div>
-      <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+      <!--<img class="pop-deco-right" src="./images/pop-deco-right0.png" />-->
     </div>
     <div class="pop-deco-bottom">
       <div class="pop-deco-bottom-left">
-        <img class="tr-03" src="./images/tr-030.png" />
+       <!-- <img class="tr-03" src="./images/tr-030.png" />-->
       </div>
-      <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+      <!--<img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />-->
+		<div class="pop_bottom_center"></div>
       <div class="pop-deco-bottom-right">
-        <img class="tr-04" src="./images/tr-040.png" />
+       <!-- <img class="tr-04" src="./images/tr-040.png" />-->
       </div>
     </div>
   </div>
@@ -403,15 +423,16 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
   <div class="pop-deco-top">
     <div class="pop-deco-top-left">
-      <img class="tr-01" src="./images/tr-010.png" />
+     <!-- <img class="tr-01" src="./images/tr-010.png" />-->
     </div>
-    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+	  <div class="pop_top_center"></div>
+   <!-- <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
     <div class="pop-deco-top-right">
-      <img class="tr-02" src="./images/tr-020.png" />
+     <!-- <img class="tr-02" src="./images/tr-020.png" />-->
     </div>
   </div>
   <div class="pop-wrap">
-    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+   <!-- <img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
     <div class="pop-cont">
       <h4 class="pop_title font_gmarket_b">방패용사 성공담 RISE</h4>
       <h5 class="pop-desc-s font_gmarket_b">친구초대 이벤트에 참여해주셔서 감사합니다.</h5>
@@ -431,15 +452,16 @@
         <p class="pop-ok-desc">확인</p>
       </button>
     </div>
-    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+   <!-- <img class="pop-deco-right" src="./images/pop-deco-right0.png" /> -->
   </div>
   <div class="pop-deco-bottom">
     <div class="pop-deco-bottom-left">
-      <img class="tr-03" src="./images/tr-030.png" />
+     <!-- <img class="tr-03" src="./images/tr-030.png" />-->
     </div>
-    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <!--<img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />-->
+	  <div class="pop_bottom_center"></div>
     <div class="pop-deco-bottom-right">
-      <img class="tr-04" src="./images/tr-040.png" />
+     <!-- <img class="tr-04" src="./images/tr-040.png" />-->
     </div>
   </div>
 </div>
@@ -452,15 +474,16 @@
   <div class="popup" style="background: url(./images/pop_bg.jpg) center; background-size: cover;background-repeat: no-repeat;">
   <div class="pop-deco-top">
     <div class="pop-deco-top-left">
-      <img class="tr-01" src="./images/tr-010.png" />
+      <!-- <img class="tr-01" src="./images/tr-010.png" /> -->
     </div>
-    <img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />
+    <!--<img class="pop-deco-top-center" src="./images/pop-deco-top-center0.png" />-->
+	  <div class="pop_top_center"></div>
     <div class="pop-deco-top-right">
-      <img class="tr-02" src="./images/tr-020.png" />
+      <!--<img class="tr-02" src="./images/tr-020.png" />-->
     </div>
   </div>
   <div class="pop-wrap pop-friend-wrap">
-    <img class="pop-deco-left" src="./images/pop-deco-left0.png" />
+   <!-- <img class="pop-deco-left" src="./images/pop-deco-left0.png" />-->
     <div class="pop-cont">
       <div class="friend_area">
         <h4 class="pop_title font_gmarket_b">현재 당신이 초대한 친구 수는</h4>
@@ -472,15 +495,16 @@
         <p class="pop-ok-desc">확인</p>
       </button>
     </div>
-    <img class="pop-deco-right" src="./images/pop-deco-right0.png" />
+   <!-- <img class="pop-deco-right" src="./images/pop-deco-right0.png" />-->
   </div>
   <div class="pop-deco-bottom">
     <div class="pop-deco-bottom-left">
-      <img class="tr-03" src="./images/tr-030.png" />
+      <!--<img class="tr-03" src="./images/tr-030.png" />-->
     </div>
-    <img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />
+    <!--<img class="pop-deco-bottom-center" src="./images/pop-deco-bottom-center0.png" />-->
+	  <div class="pop_bottom_center"></div>
     <div class="pop-deco-bottom-right">
-      <img class="tr-04" src="./images/tr-040.png" />
+     <!-- <img class="tr-04" src="./images/tr-040.png" />-->
     </div>
   </div>
 </div>
@@ -535,7 +559,7 @@
   <div id="fullpage">
 
     <!--01. 메인 -->
-    <section id="main-page" class="section fp-auto-height-responsive subsection scroll_x" data-color="white" data-anchor="main">
+    <section id="main-page" class="section fp-auto-height-responsive subsection" data-color="white" data-anchor="main">
       <article class="intro_cont">
         <div class="main_box">
           <!-- <h2>방패용사 성공담 RISE</h2>
@@ -543,7 +567,7 @@
           <img src="./images/main_desc.png">
           <a href="#event" class="btn_main_pre"></a> -->
           <div id = "main_logo" class="logo_box"></div>		
-          <button class="btn_play btn_overflow" onclick="openYoutube('Yr-90OpqBqQ');"></button>
+          <button class="btn_play btn_overflow" onclick="openYoutube('m-il2xceaIA');"></button>
           <div id = "animContainer" class="ani_box"></div>	
         </div>
         <div class="mask"></div>
@@ -552,7 +576,7 @@
     <!-- // 01. 메인 -->
 
     <!-- 02. 사전예약 -->
-    <section id="pre" class="section fp-auto-height-responsive subsection scroll_x" style="background: url(./images_pre/advance.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="prereg">
+    <section id="pre" class="section fp-auto-height-responsive" style="background: url(./images_pre/advance.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="prereg">
     <div class="rectangle-9"></div>
     <div class="pre_img_char_box">
       <img class="pre_img_char pre_char_1" src="./images_pre/ch1.png" />
@@ -566,7 +590,7 @@
           <div class="title views_1024 m_pre_title_1">&lt;방패용사 성공담 RISE&gt;</div>
           <div class="title views_1024 m_pre_title_2">사전예약</div>
         </div>
-        <div class="sub-deco-box">
+        <!-- <div id="pre_sub-deco-box-1" class="sub-deco-box">
           <div class="frame-50">
             <div class="frame-46">
               <img class="deco-2-2" src="./images_pre/deco-2-20.png" />
@@ -592,7 +616,35 @@
               <img class="deco-1-12" src="./images_pre/eco-1-11.png" />
             </div>
           </div>
+        </div> -->
+        <div class="sub-deco-box">
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-2-2" src="./images_ev1/deco-2-20.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-top-1" src="./images_ev1/deco-wide-top-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-2-22" src="./images_ev1/deco-2-21.png" />
+            </div>
+          </div>
+          <div class="sub-title-small2">
+            <p class="event-1">다시 한 번 이 ‘세계’로</p>
+          </div>
+          <div class="frame-50">
+            <div class="frame-46">
+              <img class="deco-1-1" src="./images_ev1/deco-1-10.png" />
+            </div>
+            <div class="frame-45">
+              <img class="deco-wide-bottom-1" src="./images_ev1/deco-wide-bottom-10.png" />
+            </div>
+            <div class="frame-48">
+              <img class="deco-1-12" src="./images_ev1/deco-1-11.png" />
+            </div>
+          </div>
         </div>
+        <p class="desc_pre_color font_gmarket">사전예약 신청기간 <span class="font_w font_gmarket">: 2024.12.18 ~ 추후 안내 시까지</span></p>
       </div>
       <div class="frame-62">
 
@@ -670,27 +722,17 @@
           style="background: url(./images_pre/frame-362.png) center; background-size: cover; background-repeat: no-repeat;">
           <div class="div2">스토어 사전예약 추가 보상</div>
         </div>
-        <div class="frame-373" style="background: url(./images_pre/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
+        <div id="store_box" class="frame-373" style="background: url(./images_pre/frame-372.png) center; background-size: cover; background-repeat: no-repeat;">
           <div class="tip_wrap">
             <div class="tip">
               <img class="event-tip-1-1" src="./images_pre/event-tip-1-10.png" />
             </div>
             <div class="frame-64">
-              <a href="" target="_blank" class="btn-apple-pre-kr">
-                <img class="vector" src="./images_pre/vector0.svg" />
-                <img class="vector2" src="./images_pre/vector1.svg" />
-                <img class="vector3" src="./images_pre/vector2.svg" />
-                <img class="xmlid-20" src="./images_pre/xmlid-200.svg" />
-                <img class="group" src="./images_pre/group0.svg" />
-                <img class="group2" src="./images_pre/group1.svg" />
+              <a href="https://play.google.com/store/apps/details?id=com.itoxi.aos.shieldofhero" target="_blank" class="btn-apple-pre-kr">
+                <img class="frame-64_pre_btn" src="./images/btn_google_pre_kr.svg" />
               </a>
-              <a href="" target="_blank" class="btn-google-pre-kr">
-                <img class="vector4" src="./images_pre/vector3.svg" />
-                <img class="vector5" src="./images_pre/vector4.svg" />
-                <img class="vector6" src="./images_pre/vector5.svg" />
-                <img class="vector7" src="./images_pre/vector6.svg" />
-                <img class="group3" src="./images_pre/group2.svg" />
-                <img class="group4" src="./images_pre/group3.svg" />
+              <a href="https://onesto.re/0000780838" target="_blank" class="btn-google-pre-kr">
+                <img class="frame-64_pre_btn" src="./images/btn_one_pre_kr.svg" />
               </a>
             </div>
           </div>
@@ -706,6 +748,9 @@
 
   <!-- 03-1. 이벤트1 -->
   <section id="advance" class="section fp-auto-height-responsive subsection _3-page scroll_x" style="background: url(./images_ev1/image0.png) center; background-size: cover; background-repeat: no-repeat;" data-anchor="ahcv">
+    <div class="ev1_img_char_box none_1024">
+      <img class="ev1_img_char" src="./images_ev1/ch4.png" />
+    </div>
     <div class="cont-ev-1">
       <div class="frame-30">
         <div class="sub-title-small">
@@ -753,18 +798,23 @@
       <div class="frame-29">
         <div class="event-1-card">
           <img class="event-1-card-01-1" src="./images_ev1/event-1-card-01-10.png" />
+          <p class="font_gmarket_b font_attain">달성 시</p>
         </div>
         <div class="event-1-card2">
           <img class="event-1-card-02" src="./images_ev1/event-1-card-020.png" />
+          <p class="font_gmarket_b font_attain">달성 시</p>
         </div>
         <div class="event-1-card2">
           <img class="event-1-card-03" src="./images_ev1/event-1-card-030.png" />
+          <p class="font_gmarket_b font_attain">달성 시</p>
         </div>
         <div class="event-1-card2">
           <img class="event-1-card-04" src="./images_ev1/event-1-card-040.png" />
+          <p class="font_gmarket_b font_attain">달성 시</p>
         </div>
         <div class="event-1-card2">
           <img class="event-1-card-05" src="./images_ev1/event-1-card-050.png" />
+          <p class="font_gmarket_b font_attain">달성 시</p>
         </div>
       </div>
       <div class="frame-31">
@@ -781,6 +831,9 @@
 
   <!-- 03-2. 이벤트2 -->
   <section id="inv" class="section fp-auto-height-responsive subsection _4-page scroll_x" data-anchor="invite" style="background: url(./images_ev2/_4-page.png) center; background-size: cover; background-repeat: no-repeat;">
+    <div class="ev2_img_char_box none_1024">
+      <img class="ev2_img_char" src="./images_ev2/ch5.png" />
+    </div>
     <div class="content">
       <div class="frame-39">
         <div class="sub-title-small">
@@ -817,7 +870,10 @@
           </div>
         </div>
       </div>
-      <div class="card-step">
+      <div class="m_card-step views_1024">
+        <img class="m_card-step-img" src="./images_ev2/m_card_step.png" />
+      </div>
+      <div class="card-step none_1024">
         <div class="frame-41">
           <div class="ev2-frame-372">
             <div
@@ -870,12 +926,14 @@
       </div>
       <div class="invitation">
         <label class="input"></label>
-        <button class="btn-invitation-link">
-          <img class="btn-invitation-link2" src="./images_ev2/btn-invitation-link1.png" />
-        </button>
-        <button class="btn-invitation-ok">
-          <img class="btn-invitation-ok2" src="./images_ev2/btn-invitation-ok1.png" />
-        </button>
+        <div class="ev2_flex_btn">
+          <button class="btn-invitation-link">
+            <img class="btn-invitation-link2" src="./images_ev2/btn-invitation-link1.png" />
+          </button>
+          <button class="btn-invitation-ok">
+            <img class="btn-invitation-ok2" src="./images_ev2/btn-invitation-ok1.png" />
+          </button>
+        </div>
       </div>
       <!-- <div class="frame-44">
         <div class="frame-53 check_flex">
@@ -898,24 +956,34 @@
     <div class="intro_slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_1.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_1.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_1.jpg" />
         </div>
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_2.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_2.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_2.jpg" />
         </div>
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_3.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_3.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_3.jpg" />
         </div>
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_4.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_4.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_4.jpg" />
         </div>
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_5.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_5.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_5.jpg" />
         </div>
         <div class="swiper-slide">
-          <img class="img-intro" src="./imges_intro/intro_img_6.jpg" />
+          <img class="img-intro none_1024" src="./imges_intro/intro_img_6.jpg" />
+          <img class="img-intro views_1024" src="./imges_intro/m_intro_img_6.jpg" />
         </div>
       </div>
+    </div>
+    <div class="sw_btn_wrap">
+      <div class="views_1024 swiper-button-prev"></div>
+      <div class="views_1024 swiper-button-next"></div>
     </div>
     <img class="img-intro" src="./imges_intro/bg_intro.jpg" />
 	</section>
@@ -1016,7 +1084,7 @@
 	<!-- // 06. 게임특징 -->
 
   <!-- 06. 미디어 -->
-	<section id="media" class="section fp-auto-height-responsive scroll_x" data-anchor="medias">
+	<section id="media" class="section fp-auto-height-responsive" data-anchor="medias">
     <div class="media_slide">
 
       <div class="title">
@@ -1053,45 +1121,46 @@
           <!-- <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div> -->
         </div>
-        <div class="swiper_all">
-          <div thumbsSlider="" class="swiper mySwiper pagenation">
-            <div class="swiper-wrapper media_wrapper">
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-6.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-7.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-8.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-1.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-2.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-3.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-4.jpg"/>
-                <div class="bg_media_black"></div>
-              </div>
-              <div class="swiper-slide media_pagenation media_slide_main">
-                <img  src="./images_media/img-media-5.jpg"/>
-                <div class="bg_media_black"></div>
+        <div class="swiper_cont">
+          <div class="swiper_all">
+            <div thumbsSlider="" class="swiper mySwiper pagenation">
+              <div class="swiper-wrapper media_wrapper">
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-6.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-7.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-8.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-1.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-2.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-3.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-4.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
+                <div class="swiper-slide media_pagenation media_slide_main">
+                  <img  src="./images_media/img-media-5.jpg"/>
+                  <div class="bg_media_black"></div>
+                </div>
               </div>
             </div>
           </div>
-          
-        </div>
+          </div>
       </div>
     </div>
     <div class="rectangle-9"></div>
@@ -1100,31 +1169,8 @@
 
 <section id="footer" class="section fp-auto-height-responsive fp-auto-height" data-anchor="copyright">
 	<div class="wrap">
-	  <div class="footer_cont">
-		<div class="footer_left_box">
-		  <a class="logo" href="https://www.itoxi.co.kr/" target="_blank">아이톡시</a>
-		  <div class="footer_bar"></div>
-		  <a class="c_logo" href="#intro">개발사</a>
-		</div>
-
-		<div class="desc_itoxi">
-		  <p class="font_g font-xxs">주식회사 아이톡시<br>
-		  주소 | 서울특별시 강남구 도산대로 427, 파모소빌딩 5층<br>
-		대표자 | 전봉규<br>
-	  사업자등록번호 | 211-86-23306</p>
-		</div>
-	  </div>
-		<div class="footer_right">
-		<div class="footer_text">
-		  <ul class="footer_menu font-xs">
-			<li><a href="https://itoxi.oqupie.com/portals/1549/articles/31545" class="font_g pp_left" target="_blank">이용약관</a></li>
-			<li class="footer_center_menu"><a href="https://itoxi.oqupie.com/portals/1549/articles/31462" class="pp_center"  target="_blank">개인정보처리방침</a></li>
-			<li><a href="https://itoxi.oqupie.com/portals/1549/articles/31719" class="pp_right"  target="_blank">운영정책</a></li>
-		  </ul>
-		</div>
-		 <p class="sns_txt">@ITOXI Corp. & Mihua Interactive Ltd. ALL RIGHTS RESERVED.</p>
-
-	   </div>
+    <p>COPYRIGHT ©2024 STACOLINK CO., Ltd ALL RIGHTS RESERVED</p>
+    <p>©2019 アネコユサギ／KADOKAWA／盾の勇者の製作委員会</p>
 	 </div>
   </section>
   </div>
@@ -1148,7 +1194,7 @@
     
   const clickableDiv = document.getElementById('animContainer');
   clickableDiv.addEventListener('click', () => {
-  const url = 'https://www.naver.com';
+  const url = '#prereg';
   window.location.href = url;
   });
   const animationContainer = document.getElementById('animContainer');
@@ -1191,50 +1237,28 @@ $(document).ready(function(){
 
         $('#info_k').text('현재 body 클래스: ' + bodyClasses);
           if (bodyClasses === 'fp-viewing-main') { $('#fp-nav').css('background', 'none');}
-          else{ $('#fp-nav').css('background', 'url(images/bg_nav.png) no-repeat center / cover');}
-			
+          else{ $('#fp-nav').css('background', 'url(images/bg_nav.png) no-repeat center / cover');
+        }
+          if (bodyClasses === 'fp-viewing-prereg') {
+                document.querySelector('.pre_img_char_box').classList.add('pre_box_visible');
+          }
+          if (bodyClasses === 'fp-viewing-ahcv') {
+            document.querySelector('.ev1_img_char_box').classList.add('ev1_box_visivle');
+          } 
+          if (bodyClasses === 'fp-viewing-invite') {
+            document.querySelector('.ev2_img_char_box').classList.add('ev2_box_visivle');
+          } 
         },
         navigationPosition: "left",
         verticalCentered: false,
-        anchors: ['main', 'prereg', 'ahcv', 'invite', 'world', 'char', 'gamestic', 'medias', 'copyright'],
         scrollOverflow: true,
-        navigation: true,
         menu : '#fp-nav',
-        autoScrolling: true, // 수직 스크롤 비활성화
-        scrollHorizontally: false, // 수평 스크롤 활성화
         scrollingSpeed: 700,
-        // scrollBar:true,
-        // navigationTooltips: [
-        //     '메인', 
-        //     '사전예약',  
-        //     '사전예약 달성', 
-        //     '친구초대', 
-        //     '세계관', 
-        //     '캐릭터', 
-        //     '게임 특징', 
-        //     '미디어',
-        //     '푸터'
-        // ],
         showActiveTooltip: true,
         bigSectionsDestination: top,
         normalScrollElements: ".popup_video_mask, .wrap_pop .scroll_x",
         fixedElements: ".fixed_top, .fixed_sns, div.m_top, .popup_btn, #m_menu, #pop_bg, #pop_wrap",
         responsiveWidth: 1025,
-        // onLeave: function(origin, destination, direction, trigger){
-        //     if (origin.anchor === 'main') {
-        //         $('#fp-nav').css('background', 'none');
-        //     }
-        // },
-        // afterLoad: function(origin, destination, direction){
-        //     if (destination.anchor === 'main') {
-        //         $('#fp-nav').css('background', 'none');
-        //     } else {
-        //         $('#fp-nav').css('background', 'url(../images/bg_nav.png) no-repeat center / cover');
-        //     }
-        // },
-        // afterRender: function(){
-        //     $('#fp-nav').css('background', 'none');
-        // }
     });
 
     function Mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
@@ -1249,13 +1273,26 @@ $(document).ready(function() {
     // hover 효과를 추가하는 함수
     function setHoverEffect() {
         $('#desc_cs_1').addClass('hover-effect');
+        $('#desc_cs_1 span').addClass('hover-effect-span');
         $('#desc_cs_p_1').addClass('hover-effect');
     }
 
     // hover 효과를 제거하는 함수
     function removeHoverEffect() {
-        $('#desc_cs_1').removeClass('hover-effect');
-        $('#desc_cs_p_1').removeClass('hover-effect');
+        const hash = window.location.hash;
+        if (hash !== '#ahcv' && hash !== '#invite') {
+            $('#desc_cs_1').removeClass('hover-effect');
+            $('#desc_cs_1 span').removeClass('hover-effect-span');
+            $('#desc_cs_p_1').removeClass('hover-effect'); 
+        }
+    }
+
+    function setActiveEffect() {
+        $('#desc_cs_1').addClass('active-effect'); // active-effect 추가
+    }
+
+    function removeActiveEffect() {
+        $('#desc_cs_1').removeClass('active-effect');
     }
 
     $('#desc_nav_inner_1').hover(setHoverEffect, removeHoverEffect);
@@ -1275,8 +1312,14 @@ $(document).ready(function() {
         const hash = window.location.hash;
         if (hash === '#ahcv' || hash === '#invite') {
             setHoverEffect(); // 해당 해시일 경우 hover 효과 유지
+            if (hash === '#invite') {
+                setActiveEffect(); // #invite일 경우 active-effect 추가
+            } else {
+                removeActiveEffect(); // #ahcv일 경우 active-effect 제거
+            }
         } else {
-            removeHoverEffect(); // 다른 경우 hover 효과 제거
+            removeHoverEffect(); // hover 효과 제거
+            removeActiveEffect(); // active-effect 제거
         }
     }
 
@@ -1284,21 +1327,74 @@ $(document).ready(function() {
     checkHash();
     $(window).on('hashchange', checkHash);
 });
+
+</script>
+
+<script>
+$(document).ready(function() {
+    // hover 효과를 추가하는 함수
+    function setHoverEffect(elementId) {
+        $('#' + elementId).addClass('hover-effect');
+    }
+
+    // hover 효과를 제거하는 함수
+    function removeHoverEffect(elementId) {
+        $('#' + elementId).removeClass('hover-effect'); 
+    }
+
+    // 페이지 로드 시 해시 체크
+    function checkHash() {
+        const hash = window.location.hash;
+
+        // hover 효과 제거
+        removeHoverEffect('desc_cs_p_main');
+        removeHoverEffect('desc_cs_p_pre');
+        removeHoverEffect('desc_cs_p_media');
+
+        // 해시에 따라 hover 효과 추가
+        if (hash === '#main') {
+            setHoverEffect('desc_cs_p_main');
+        } else if (hash === '#prereg') {
+            setHoverEffect('desc_cs_p_pre');
+        } else if (hash === '#medias') {
+            setHoverEffect('desc_cs_p_media');
+        }
+    }
+
+    // 페이지 로드 시 및 해시 변경 시 체크
+    checkHash();
+    $(window).on('hashchange', checkHash);
+});
+
+
 </script>
 
 <script>
 $(document).ready(function() {
   // hover 효과를 추가하는 함수
   function setHoverEffect() {
-      $('#desc_cs_2').addClass('hover-effect');
-      $('#desc_cs_p_2').addClass('hover-effect');
+    $('#desc_cs_2').addClass('hover-effect');
+    $('#desc_cs_2 span').addClass('hover-effect-span');
+    $('#desc_cs_p_2').addClass('hover-effect');
   }
 
   // hover 효과를 제거하는 함수
   function removeHoverEffect() {
-      $('#desc_cs_2').removeClass('hover-effect');
-      $('#desc_cs_p_2').removeClass('hover-effect');
+    const hash = window.location.hash;
+      if (hash !== '#world' && hash !== '#char' && hash !== '#gamestic') {
+        $('#desc_cs_2').removeClass('hover-effect');
+        $('#desc_cs_2 span').removeClass('hover-effect-span');
+        $('#desc_cs_p_2').removeClass('hover-effect');
+      }
   }
+
+  function setActiveEffect() {
+        $('#desc_cs_2').addClass('active-effect'); // active-effect 추가
+    }
+
+    function removeActiveEffect() {
+        $('#desc_cs_2').removeClass('active-effect');
+    }
 
   $('#desc_nav_inner_2').hover(setHoverEffect, removeHoverEffect);
 
@@ -1317,14 +1413,15 @@ $(document).ready(function() {
       window.location.href = '#gamestic'; // 링크로 이동
   });
 
-
   // 페이지 로드 시 해시 체크
   function checkHash() {
       const hash = window.location.hash;
       if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
           setHoverEffect(); // 해당 해시일 경우 hover 효과 유지
+          setActiveEffect(); // #invite일 경우 active-effect 추가
       } else {
           removeHoverEffect(); // 다른 경우 hover 효과 제거
+          removeActiveEffect(); // active-effect 제거
       }
   }
 
@@ -1333,8 +1430,126 @@ $(document).ready(function() {
   $(window).on('hashchange', checkHash);
 });
 
+$(document).ready(function() {
+    // 현재 해시를 확인하고 해당 a 태그에 new_color 클래스 추가
+    function updateNavColor() {
+        const hash = window.location.hash || '#main'; // 기본값 설정
+        $('.nav_btn').removeClass('new_color'); // 모든 a 태그에서 new_color 클래스 제거
+
+        // 특정 조건에 따른 클래스 추가
+        if (hash === '#ahcv' || hash === '#invite') {
+            $('#m_desc_cs_1').addClass('new_color'); // m_desc_cs_1에 new_color 추가
+        } else if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
+            $('#m_desc_cs_2').addClass('new_color'); // m_desc_cs_2에 new_color 추가
+        } else if (hash === '#main') {
+            $('a[href="#main"]').addClass('new_color'); // #main에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#prereg') {
+            $('a[href="#prereg"]').addClass('new_color'); // #prereg에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#medias') {
+            $('a[href="#medias"]').addClass('new_color'); // #medias에 해당하는 a 태그에 new_color 추가
+        }
+    }
+
+    // 페이지 로드 시 및 해시 변경 시 updateNavColor 함수 호출
+    updateNavColor();
+    $(window).on('hashchange', updateNavColor);
+
+    // a 태그 클릭 시 페이지 이동 및 클래스 추가
+    $('.nav_btn').on('click', function() {
+        const targetHash = $(this).attr('href');
+        
+        // 특정 클릭 이벤트에 따라 new_color 클래스 추가
+        if (this.id === 'm_desc_cs_nav_1' || this.id === 'm_desc_cs_nav_2') {
+            $('#m_desc_cs_1').addClass('new_color');
+            $('#m_desc_cs_2').removeClass('new_color'); // m_desc_cs_2에서 new_color 제거
+        } else if (this.id === 'm_desc_cs_nav_3' || this.id === 'm_desc_cs_nav_4' || this.id === 'm_desc_cs_nav_5') {
+            $('#m_desc_cs_2').addClass('new_color');
+            $('#m_desc_cs_1').removeClass('new_color'); // m_desc_cs_1에서 new_color 제거
+        } else {
+            $('#m_desc_cs_1').removeClass('new_color'); // 기본적으로 m_desc_cs_1에서 new_color 제거
+            $('#m_desc_cs_2').removeClass('new_color'); // 기본적으로 m_desc_cs_2에서 new_color 제거
+        }
+        
+        // 해시를 업데이트하여 페이지 이동
+        window.location.hash = targetHash;
+    });
+});
 
 
+$(document).ready(function() {
+    // 현재 해시를 확인하고 해당 a 태그에 new_color 클래스 추가
+    function updateNavColor() {
+        const hash = window.location.hash || '#main'; // 기본값 설정
+        $('.nav_btn').removeClass('new_color'); // 모든 a 태그에서 new_color 클래스 제거
+
+        // 특정 조건에 따른 클래스 추가
+        if (hash === '#ahcv' || hash === '#invite') {
+            $('#m_desc_cs_1').addClass('new_color'); // m_desc_cs_1에 new_color 추가
+        } else if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
+            $('#m_desc_cs_2').addClass('new_color'); // m_desc_cs_2에 new_color 추가
+        } else if (hash === '#main') {
+            $('a[href="#main"]').addClass('new_color'); // #main에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#prereg') {
+            $('a[href="#prereg"]').addClass('new_color'); // #prereg에 해당하는 a 태그에 new_color 추가
+        } else if (hash === '#medias') {
+            $('a[href="#medias"]').addClass('new_color'); // #medias에 해당하는 a 태그에 new_color 추가
+        }
+    }
+
+    // 페이지 로드 시 및 해시 변경 시 updateNavColor 함수 호출
+    updateNavColor();
+    $(window).on('hashchange', updateNavColor);
+});
+</script>
+<script>
+const openMobileNav = document.querySelector('.btn_nav_open');
+const closeMobileNav = document.querySelector('.btn_nav_close');
+const mobileNav = document.querySelector('.m_nav');
+const myPageButton = document.querySelector('.btn_login_m');
+let isMyPageButtonActive = false;
+
+function updateNavColor() {
+    const hash = window.location.hash || '#main';
+    $('.nav_btn').removeClass('new_color');
+
+    // 특정 조건에 따른 클래스 추가
+    if (hash === '#ahcv' || hash === '#invite') {
+        $('#m_desc_cs_1').addClass('new_color');
+    } else if (hash === '#world' || hash === '#char' || hash === '#gamestic') {
+        $('#m_desc_cs_2').addClass('new_color');
+    } else if (hash === '#main') {
+        $('a[href="#main"]').addClass('new_color');
+    } else if (hash === '#prereg') {
+        $('a[href="#prereg"]').addClass('new_color');
+    } else if (hash === '#medias') {
+        $('a[href="#medias"]').addClass('new_color');
+    }
+}
+
+openMobileNav.addEventListener('click', function() {
+    mobileNav.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const currentHash = window.location.hash;
+    window.location.hash = '';
+    window.location.hash = currentHash;
+    updateNavColor();
+});
+
+closeMobileNav.addEventListener('click', function() {
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = 'visible';
+
+    const currentHash = window.location.hash;
+    window.location.hash = '';
+    window.location.hash = currentHash;
+    updateNavColor();
+});
+
+$(document).ready(function() {
+    updateNavColor();
+    $(window).on('hashchange', updateNavColor);
+});
 </script>
 </body>
 </html>

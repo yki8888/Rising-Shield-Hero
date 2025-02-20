@@ -223,12 +223,12 @@ button{ background: transparent;border: none; cursor: pointer;}
 @media screen and (max-width: 1024px){
   .pc, .mobile_world,
   .container .pc, .none_1024{
-    display: none;
+    display: none !important;
   }
 
   .mobile,
   .container .mobile, .views_1024{
-    display: block;
+    display: block !important;
   }
 
   .wrap{

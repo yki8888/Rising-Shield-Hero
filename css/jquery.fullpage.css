@@ -226,5 +226,5 @@ html.fp-enabled,
 }
 
 #fp-nav ul li:last-child{
-    display: none;
+    /* display: none; */
 }

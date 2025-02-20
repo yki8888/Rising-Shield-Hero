@@ -139,7 +139,6 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 39px;
   position: relative;
   overflow: hidden;
 }
@@ -161,7 +160,6 @@
 }
 .deco-1-1 {
   width: 476px;
-  height: 15px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -458,6 +456,14 @@
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
+.tip_wrap{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+} /*0218추가*/
+
 .event-tip-1-1 {
   width: 365px;
   height: 129px;
@@ -674,12 +680,20 @@ input[type='radio']:checked, input[type='checkbox']:checked {
   font-size: 22px;
 }
 
-.pre_img_char_box{
+.pre_img_char_box {
   position: relative;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
+  opacity: 0; /* 초기 상태는 보이지 않음 */
+  transform: translateX(100px); /* 오른쪽에서 시작 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 효과 */  
+}
+
+.pre_box_visible{
+  opacity: 1; /* 보이게 설정 */
+  transform: translateX(0); /* 원래 위치로 이동 */
 }
 
 .pre_char_1{
@@ -700,12 +714,23 @@ input[type='radio']:checked, input[type='checkbox']:checked {
   top: 70px;
 }
 
+.desc_pre_color{
+  color: #ffe155;
+  font-size: 24px;
+}
+
+.frame-64_pre_btn{
+  width: 100%;
+}
+
 @media screen and (max-width: 1024px){
   .frame-62{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    padding: 0 20px;
   }
 
   .frame-60{
@@ -765,18 +790,32 @@ input[type='radio']:checked, input[type='checkbox']:checked {
 
   .btn_apply{
     width: 100%;
-    height: 76px;
+    height: 95px;
   }
 
   .frame-372{
     width: 100%;
-    margin-top: 160px;
+    margin-top: 230px;
+  }
+
+  #store_box{
+    padding: 40px 0;
+  }
+
+  .event-1{
+    font-size: 52px;
+  }
+
+  #pre_sub-deco-box-1, .sub-deco-box{
+    width: 750px !important;
   }
 
   .frame-64{
     flex-direction: row;
     justify-content: space-between;
     padding-top: 10px;
+    width: 100%;
+    max-width: 435px;
   }
 
   .tip_wrap{
@@ -784,11 +823,47 @@ input[type='radio']:checked, input[type='checkbox']:checked {
   }
 
   .btn-apple-pre-kr, .btn-google-pre-kr{
-    width: 170px;
+    width: 200px
   }
 
   .btn_event_notice{
     font-size: 30px;
   }
 
+  .frame-36{
+    width: 343px !important;
+  }
+
+  .frame-36 img{
+    width: 343px !important;
+  }
+
+  .tip{
+    width: 435px;
+    height: 153px;
+  }
+
+  .event-tip-1-1{
+    width: 100%;
+    height: 100%;
+  }
+
+  .event-tip-2-3 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tip-2 {
+    width: 353px;
+    height: 249px;
+  }
+
+  .div4 {
+    font-size: 40px !important;
+  }
+
+  input[type='radio'], input[type='checkbox']{
+    width: 26px;
+    height: 26px;
+  }
 }

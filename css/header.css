@@ -11,7 +11,7 @@
   top:0;
   left: 0;
   padding: 0 20px;
-  z-index: 500;
+  z-index: 800;
 }
 
 .gnb_right{
@@ -183,11 +183,11 @@ MENU
 }
 
 #desc_nav_inner_1{
-  top: 45%;
+  top: 46%;
 }
 
 #desc_nav_inner_2{
-  top: 59%;
+  top: 58%;
 }
 
 #desc_cs_nav_1, #desc_cs_nav_2, #desc_cs_nav_3, #desc_cs_nav_4, #desc_cs_nav_5{
@@ -217,7 +217,7 @@ MENU
   margin-bottom: 60px;
 }
 
-#fp-nav ul li:nth-child(7){
+#fp-nav ul li:nth-child(5){
   margin-bottom: 100px;
 }
 
@@ -227,15 +227,42 @@ MENU
 }
 
 #desc_cs_1.hover-effect, #desc_cs_2.hover-effect {
-  top: -4px;
+  /* border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 30% !important;
+  width: 11px !important;
+  height: 11px !important;
+  background: #FFBC47;
+  margin: -2px 0 0 -2px; */
+  /* top: -4px;
   left: -6px;
   width: 26px;
   height: 29px;
-  background: url(../images/icon_point.png) no-repeat center / contain;
+  background: url(../images/icon_point.png) no-repeat center / contain; */
 }
 
-#desc_cs_1.hover-effect span, #desc_cs_2.hover-effect span{
+#desc_cs_1.active-effect span, #desc_cs_2.active-effect span{
   opacity: 0;
+  transition: all 0s;
+}
+
+#fp-nav ul li .hover-effect{
+  
+}
+
+#desc_cs_1.active-effect + #desc_cs_p_1{
+  background: linear-gradient(180deg, #FFEB6F 8.33%, #FF9B33 81.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#fp-nav ul li .hover-effect{
+  background: linear-gradient(180deg, #FFEB6F 8.33%, #FF9B33 81.94%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* hover 시 p 태그 스타일 */
@@ -244,6 +271,17 @@ MENU
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#fp-nav ul li #desc_cs_1.active-effect, #fp-nav ul li #desc_cs_2.active-effect{
+  top: -4px;
+  left: -6px;
+  width: 26px;
+  height: 29px;
+  background: url(../images/icon_point.png) no-repeat center / contain !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+
 }
 
 #fp-nav ul #nav_none_1, #fp-nav ul #nav_none_2, #fp-nav ul #nav_none_3, #fp-nav ul #nav_none_4{
@@ -289,10 +327,16 @@ MENU
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
-  left: 30%;
-  width: 11px;
-  height: 11px;
+  left: 30% !important;
+  width: 11px !important;
+  height: 11px !important;
   background: #FFBC47;
+  transition: all 0s;
+}
+
+#fp-nav ul li:hover a span{
+  display: block;
+  margin: -2px 0 0 -2px !important;
 }
 
 #fp-nav ul li a.active, .fp-slidesNav ul li a.active, #fp-nav ul li:hover a.active, .fp-slidesNav ul li:hover a.active{
@@ -300,17 +344,21 @@ MENU
   left: -6px;
   width: 26px;
   height: 29px;
-  background: url('../images/icon_point.png') no-repeat center / contain;
+  background: url('../images/icon_point.png') no-repeat center / contain !important;
 }
 
 #fp-nav ul li:hover a, .fp-slidesNav ul li:hover a{
-  top: -4px;
+  /* top: -4px;
   left: -6px;
   width: 26px;
   height: 29px;
   background: url('../images/icon_point.png') no-repeat center / contain;
   transition: all 0.1s;
-  z-index: 999;
+  z-index: 999; */
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  
 }
 
 #fp-nav ul li .fp-tooltip{
@@ -408,9 +456,8 @@ position:relative
 	content: "";
   position: absolute;
   width: 1px;
+  height: 75%;
   left: 0;
-  top: 1.2rem;
-  height: calc(100% - 2.4rem); /* 위 아래 여백 합계만큼 높이에서 제외 */
   background: linear-gradient(180deg, rgba(255, 206, 136, 0.00) 0%, #FFC055 19.5%, #FFA800 51.5%, #FFBB45 76%, rgba(255, 206, 136, 0.00) 100%);
   transform: translateX(-50%); /* X축 기준으로 중앙 정렬 */
 }
@@ -625,7 +672,7 @@ SNS MENU
 .sns ul li .btn_pre_go{
   width: 223px;
   height: 49px;
-  background-image: url('../images/reservation_btn2.png');
+  background: url('../images/reservation_btn2.png');
 }
 
 .sns ul li .btn_pre_apple, .sns ul li .btn_pre_google{
@@ -652,11 +699,11 @@ SNS MENU
 .m_pre_wrap{
   display: flex;
   gap: 20px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .img_m_pre_sns{
-  height: 49px;
+  height: 60px;
 }
 
 .cont_share_2{
@@ -865,8 +912,8 @@ SNS MENU
 }
 
 .btn_m_close{
-	width: 2.2rem;
-    height: 2.2rem;
+	width: 78px;
+  height: 78px;
 	background: url(../images/m/btn_m_menu_close.svg) no-repeat center / contain;
 	font-size: 0;
   margin-left: 0.5rem;
@@ -882,24 +929,33 @@ SNS MENU
     width: 100%;
 }
 
+.menu_on_wrap{
+  height: 90vh;
+  overflow-y: scroll;
+}
+
 .m_nav.active{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 60px;
   text-align: center;
 }
 
 .m_nav ul li a{
   padding: 15px 0;
   color:#fff;
-  font-size: 30px;
+  font-size: 66px;
   font-weight: 300
 }
 
 .m_nav ul li a.current{
-  font-weight: 600;
+  /* font-weight: 600; */
+}
+
+.menu_on_img{
+  width: 392px;
 }
 
 .nav_btn{
@@ -910,7 +966,7 @@ SNS MENU
 }
 
 .m_nav ul li .desc_m_nav_inner{
-  font-size: 20px;
+  font-size: 50px;
   padding: 6px 0;
 }
 
@@ -925,12 +981,12 @@ SNS MENU
 }
 
 .btn_nav_open{
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0.2rem;
-	margin-left:0.5rem;
-    background: url(../images/btn_m_menu.svg) no-repeat center / contain;
-    font-size: 0;
+  width: 78px;
+  height: 78px;
+  padding: 0.2rem;
+  margin-left:0.5rem;
+  background: url(../images/btn_m_menu.svg) no-repeat center / contain;
+  font-size: 0;
 }
 
 .m_nav ul li a.btn_ncafe{
@@ -1012,9 +1068,18 @@ SNS MENU
 
 
 @media screen and (max-width: 1024px){
+  .sns ul li a, .sns ul li button:not(.btn_login){
+    width: 78px;
+    height: 78px;
+  }
+
+  .sns ul{
+    gap: 52px;
+  }
+
   .gnb{ 
 	/*background: rgba(0,0,0,0.2); */
-	padding:1rem 3vw; 
+	padding: 26px 15px; 
   } 
 
   .cont_share_2{

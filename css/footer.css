@@ -4,7 +4,8 @@
 #footer{
   background: #000;
   width: 100%;
-  padding-bottom: 50px;
+  height: 70px !important;
+  /* padding-bottom: 50px; */
   overflow: hidden;
 } 
 
