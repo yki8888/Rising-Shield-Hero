@@ -179,9 +179,9 @@ button{ background: transparent;border: none; cursor: pointer;}
   display: none;
 }
 
-.fp-scroller{
+/* .fp-scroller{
   height: 100%;
-}
+} */
 
 /* @media screen and (max-width: 1400px){
   body{

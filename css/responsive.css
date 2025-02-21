@@ -78,9 +78,6 @@
 }
 
 @media screen and (max-width: 1200px){
-  #pre .content{
-    transform: translate(-50%, -50%) scale(0.75);
-  }
 
   .pre_char_1{
     width: 700px;
@@ -95,8 +92,8 @@
     width: 230px;
   }
 
-  .cont-ev-1, #inv .content{
-    transform: translate(-50%, -50%) scale(0.75);
+  #pre .content, .cont-ev-1, #inv .content{
+    transform: scale(0.75);
   }
 
   .wrap_char,

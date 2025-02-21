@@ -186,14 +186,18 @@
 
 @media screen and (max-width:1024px){
   #footer{
-    height: 325px !important;
+    height: 140px !important;
     padding-bottom: 1rem;
   }
 
   #footer .wrap{
-    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  #footer .wrap p{
+    font-size: 14px;
   }
 
   #footer .logo, #footer .c_logo{

@@ -293,7 +293,7 @@ MENU
 #fp-nav{
   /* display: none; */
   width: 100%;
-  max-width:430px;
+  max-width:350px;
   height: 100vh;
   padding: 20px 24px 20px 47px;
   /* background:url('../images/bg_nav.png') no-repeat center / cover; */
@@ -301,6 +301,8 @@ MENU
   transform: translate(0, -50%);
   margin-top: unset !important;
   transition: all 0.2s;
+  background-size: cover;
+  background-position: 90%;
 /*   height: 465px; */
 /*   border-left: 1px solid #9e9e9e; */
 }
@@ -681,7 +683,7 @@ SNS MENU
 }
 
 .btn_pre_apple{
-  background-image: url('../images/btn_apple_pre_kr.svg');
+  background-image: url('../images/btn_one_pre_kr.svg');
 }
 
 .btn_pre_google{
@@ -1083,8 +1085,8 @@ SNS MENU
   } 
 
   .cont_share_2{
-	top: 120%;
-	right: 0;
+	top: 90%;
+	right: 16px;
   }
 
   .gnb .cont_share_2 a{

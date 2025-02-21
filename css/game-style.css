@@ -47,6 +47,10 @@
   width: 100%;
 }
 
+#game .swiper-button-prev::after, #game .swiper-button-next::after{
+  content: none;
+}
+
 @media screen and (max-width: 1024px){
   #game{
     background: url(../images_game/m_bg_game.jpg) no-repeat center / cover !important;
