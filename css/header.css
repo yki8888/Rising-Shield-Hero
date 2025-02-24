@@ -659,6 +659,10 @@ SNS MENU
   background: url('../images/btn_top.svg');
 }
 
+.btn_kakao{
+  background: url('../images/btn_kakao.svg');
+}
+
 .btn_x{
   background: url('../images/btn_x.svg');
 }
