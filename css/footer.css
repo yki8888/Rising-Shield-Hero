@@ -11,8 +11,11 @@
 
 #footer .wrap{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
   padding: 20px 0;
+  width: auto;
+
 }
 
 #footer .logo {
