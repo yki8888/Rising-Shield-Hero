@@ -435,6 +435,13 @@
   flex-shrink: 0;
   position: relative;
 }
+
+.invitation .input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .input {
   background: #ffffff;
   flex: 1;
