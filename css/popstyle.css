@@ -609,11 +609,18 @@ POPUP
 .num-invite, #num_friend_phone{
     flex: 1;
     height: 40px;
-    font-size: 20px;
     padding-left: 10px;
     border: none;
     color: #fff;
     background: rgba(0, 0, 0, 0.40);
+}
+
+.num-invite{
+  font-size: 20px;
+}
+
+#num_friend_phone{
+  font-size: 12px;
 }
 
 .btn_num_invite{
